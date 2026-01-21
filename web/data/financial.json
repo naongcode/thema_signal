@@ -1,0 +1,2605 @@
+{
+  "quarter": "2025-Q4",
+  "data": {
+    "004000": {
+      "revenue": 2463800000000,
+      "operating_profit": 1641000000
+    },
+    "009830": {
+      "revenue": 13130800000000,
+      "operating_profit": 703000000
+    },
+    "078930": {
+      "revenue": 28582500000000,
+      "operating_profit": 1791000000
+    },
+    "005420": {
+      "revenue": 718200000000,
+      "operating_profit": 577000000
+    },
+    "005070": {
+      "revenue": 485600000000,
+      "operating_profit": 669000000
+    },
+    "066970": {
+      "revenue": 3887300000000,
+      "operating_profit": 685000000
+    },
+    "102710": {
+      "revenue": 680200000000,
+      "operating_profit": 950000000
+    },
+    "036830": {
+      "revenue": 565100000000,
+      "operating_profit": 1301000000
+    },
+    "161000": {
+      "revenue": 2176400000000,
+      "operating_profit": 437000000
+    },
+    "093370": {
+      "revenue": 610600000000,
+      "operating_profit": 1726000000
+    },
+    "047310": {
+      "revenue": 743900000000,
+      "operating_profit": -526000000
+    },
+    "054210": {
+      "revenue": 997900000000,
+      "operating_profit": 799000000
+    },
+    "131100": {
+      "revenue": 71900000000,
+      "operating_profit": 451999999
+    },
+    "091580": {
+      "revenue": 290800000000,
+      "operating_profit": 1126000000
+    },
+    "051910": {
+      "revenue": 50983300000000,
+      "operating_profit": 584000000
+    },
+    "006400": {
+      "revenue": 20124100000000,
+      "operating_profit": 898000000
+    },
+    "096770": {
+      "revenue": 78056900000000,
+      "operating_profit": 501999999
+    },
+    "077360": {
+      "revenue": 164400000000,
+      "operating_profit": -227000000
+    },
+    "159910": {
+      "revenue": 13300000000,
+      "operating_profit": -4767000000
+    },
+    "104830": {
+      "revenue": 581300000000,
+      "operating_profit": 1528000000
+    },
+    "121600": {
+      "revenue": 79900000000,
+      "operating_profit": 2105000000
+    },
+    "056190": {
+      "revenue": 1684400000000,
+      "operating_profit": 955000000
+    },
+    "054620": {
+      "revenue": 40800000000,
+      "operating_profit": -3740999999
+    },
+    "030530": {
+      "revenue": 881000000000,
+      "operating_profit": 1192000000
+    },
+    "079950": {
+      "revenue": 56900000000,
+      "operating_profit": -2231000000
+    },
+    "083930": {
+      "revenue": 217300000000,
+      "operating_profit": 625000000
+    },
+    "040910": {
+      "revenue": 150900000000,
+      "operating_profit": -335000000
+    },
+    "141000": {
+      "revenue": 71000000000,
+      "operating_profit": 1968000000
+    },
+    "036930": {
+      "revenue": 437900000000,
+      "operating_profit": 2829000000
+    },
+    "002790": {
+      "revenue": 4495000000000,
+      "operating_profit": 605000000
+    },
+    "078520": {
+      "revenue": 247900000000,
+      "operating_profit": 403000000
+    },
+    "161890": {
+      "revenue": 1865700000000,
+      "operating_profit": 393000000
+    },
+    "044820": {
+      "revenue": 617400000000,
+      "operating_profit": 55000000
+    },
+    "026040": {
+      "revenue": 77900000000,
+      "operating_profit": 331000000
+    },
+    "090460": {
+      "revenue": 1681100000000,
+      "operating_profit": 781000000
+    },
+    "131400": {
+      "revenue": 58100000000,
+      "operating_profit": -493000000
+    },
+    "051370": {
+      "revenue": 442700000000,
+      "operating_profit": 589000000
+    },
+    "088390": {
+      "revenue": 80400000000,
+      "operating_profit": 2691000000
+    },
+    "085670": {
+      "revenue": 260300000000,
+      "operating_profit": 688000000
+    },
+    "095500": {
+      "revenue": 490300000000,
+      "operating_profit": 198000000
+    },
+    "056700": {
+      "revenue": 201200000000,
+      "operating_profit": -138000000
+    },
+    "073110": {
+      "revenue": 98900000000,
+      "operating_profit": 148000000
+    },
+    "108320": {
+      "revenue": 2119300000000,
+      "operating_profit": 1466000000
+    },
+    "041520": {
+      "revenue": 137600000000,
+      "operating_profit": -691000000
+    },
+    "027580": {
+      "revenue": 67400000000,
+      "operating_profit": 377000000
+    },
+    "121850": {
+      "revenue": 9700000000,
+      "operating_profit": -7431000000
+    },
+    "004710": {
+      "revenue": 1360800000000,
+      "operating_profit": 411000000
+    },
+    "033640": {
+      "revenue": 588000000000,
+      "operating_profit": -113999999
+    },
+    "005290": {
+      "revenue": 1457200000000,
+      "operating_profit": 1484000000
+    },
+    "009310": {
+      "revenue": 170600000000,
+      "operating_profit": 77000000
+    },
+    "029460": {
+      "revenue": 858000000000,
+      "operating_profit": 1179000000
+    },
+    "065130": {
+      "revenue": 936400000000,
+      "operating_profit": -304000000
+    },
+    "108230": {
+      "revenue": 345000000000,
+      "operating_profit": 604000000
+    },
+    "011070": {
+      "revenue": 19589400000000,
+      "operating_profit": 649000000
+    },
+    "001210": {
+      "revenue": 46000000000,
+      "operating_profit": -2562000000
+    },
+    "038060": {
+      "revenue": 166300000000,
+      "operating_profit": 71000000
+    },
+    "082800": {
+      "revenue": 51600000000,
+      "operating_profit": -1053999999
+    },
+    "046890": {
+      "revenue": 1109400000000,
+      "operating_profit": -301000000
+    },
+    "082850": {
+      "revenue": 1355100000000,
+      "operating_profit": 254000000
+    },
+    "020760": {
+      "revenue": 124300000000,
+      "operating_profit": 85000000
+    },
+    "153490": {
+      "revenue": 136200000000,
+      "operating_profit": 202000000
+    },
+    "018670": {
+      "revenue": 8066200000000,
+      "operating_profit": 484000000
+    },
+    "017940": {
+      "revenue": 7990800000000,
+      "operating_profit": 349000000
+    },
+    "008060": {
+      "revenue": 1661900000000,
+      "operating_profit": 1185000000
+    },
+    "066900": {
+      "revenue": 333700000000,
+      "operating_profit": 269000000
+    },
+    "009150": {
+      "revenue": 9424600000000,
+      "operating_profit": 1255000000
+    },
+    "036710": {
+      "revenue": 1710400000000,
+      "operating_profit": 1753000000
+    },
+    "015260": {
+      "revenue": 107500000000,
+      "operating_profit": -994000000
+    },
+    "007660": {
+      "revenue": 642900000000,
+      "operating_profit": 1814000000
+    },
+    "007810": {
+      "revenue": 1596900000000,
+      "operating_profit": 621000000
+    },
+    "092300": {
+      "revenue": 209900000000,
+      "operating_profit": 397000000
+    },
+    "034730": {
+      "revenue": 132079400000000,
+      "operating_profit": 618000000
+    },
+    "023590": {
+      "revenue": 9210600000000,
+      "operating_profit": 780000000
+    },
+    "022100": {
+      "revenue": 1152700000000,
+      "operating_profit": 561000000
+    },
+    "012030": {
+      "revenue": 401300000000,
+      "operating_profit": 588000000
+    },
+    "035510": {
+      "revenue": 596900000000,
+      "operating_profit": 629000000
+    },
+    "094280": {
+      "revenue": 511300000000,
+      "operating_profit": 437000000
+    },
+    "010280": {
+      "revenue": 325200000000,
+      "operating_profit": 297000000
+    },
+    "012510": {
+      "revenue": 304300000000,
+      "operating_profit": 1496000000
+    },
+    "035420": {
+      "revenue": 8220100000000,
+      "operating_profit": 1587000000
+    },
+    "035720": {
+      "revenue": 6798700000000,
+      "operating_profit": 838000000
+    },
+    "112040": {
+      "revenue": 463500000000,
+      "operating_profit": -1832999999
+    },
+    "032850": {
+      "revenue": 35100000000,
+      "operating_profit": 1748999999
+    },
+    "115480": {
+      "revenue": 47000000000,
+      "operating_profit": 2368000000
+    },
+    "032620": {
+      "revenue": 133300000000,
+      "operating_profit": 566000000
+    },
+    "071200": {
+      "revenue": 88300000000,
+      "operating_profit": 871000000
+    },
+    "054950": {
+      "revenue": 142000000000,
+      "operating_profit": 1549000000
+    },
+    "009240": {
+      "revenue": 2000900000000,
+      "operating_profit": -108000000
+    },
+    "079430": {
+      "revenue": 1495700000000,
+      "operating_profit": -186000000
+    },
+    "016800": {
+      "revenue": 381300000000,
+      "operating_profit": 857000000
+    },
+    "003030": {
+      "revenue": 3953800000000,
+      "operating_profit": 1434000000
+    },
+    "005010": {
+      "revenue": 1030900000000,
+      "operating_profit": 2805000000
+    },
+    "008970": {
+      "revenue": 266200000000,
+      "operating_profit": 291000000
+    },
+    "071090": {
+      "revenue": 316400000000,
+      "operating_profit": 533000000
+    },
+    "014280": {
+      "revenue": 728900000000,
+      "operating_profit": 471000000
+    },
+    "009730": {
+      "revenue": 66600000000,
+      "operating_profit": 298000000
+    },
+    "018310": {
+      "revenue": 337700000000,
+      "operating_profit": 2017000000
+    },
+    "049960": {
+      "revenue": 50500000000,
+      "operating_profit": 1198000000
+    },
+    "001680": {
+      "revenue": 4084100000000,
+      "operating_profit": 343000000
+    },
+    "065170": {
+      "revenue": 22500000000,
+      "operating_profit": -1973999999
+    },
+    "008490": {
+      "revenue": 635000000000,
+      "operating_profit": 976000000
+    },
+    "012630": {
+      "revenue": 5044900000000,
+      "operating_profit": 314000000
+    },
+    "047040": {
+      "revenue": 10419200000000,
+      "operating_profit": 729000000
+    },
+    "014790": {
+      "revenue": 1472100000000,
+      "operating_profit": 357000000
+    },
+    "013580": {
+      "revenue": 2949700000000,
+      "operating_profit": 450000000
+    },
+    "028050": {
+      "revenue": 10054300000000,
+      "operating_profit": 699000000
+    },
+    "000720": {
+      "revenue": 21239100000000,
+      "operating_profit": 271000000
+    },
+    "006360": {
+      "revenue": 12299200000000,
+      "operating_profit": 451000000
+    },
+    "000210": {
+      "revenue": 5173700000000,
+      "operating_profit": 550000000
+    },
+    "063080": {
+      "revenue": 116200000000,
+      "operating_profit": -2274000000
+    },
+    "078340": {
+      "revenue": 677300000000,
+      "operating_profit": -223000000
+    },
+    "095660": {
+      "revenue": 294600000000,
+      "operating_profit": 664000000
+    },
+    "067000": {
+      "revenue": 163800000000,
+      "operating_profit": 451999999
+    },
+    "067160": {
+      "revenue": 289100000000,
+      "operating_profit": 2851000000
+    },
+    "036570": {
+      "revenue": 2571800000000,
+      "operating_profit": 2174000000
+    },
+    "069080": {
+      "revenue": 242100000000,
+      "operating_profit": 3428000000
+    },
+    "030350": {
+      "revenue": 7100000000,
+      "operating_profit": -13522000000
+    },
+    "047080": {
+      "revenue": 56300000000,
+      "operating_profit": 628000000
+    },
+    "058630": {
+      "revenue": 73700000000,
+      "operating_profit": 4093000000
+    },
+    "101730": {
+      "revenue": 86200000000,
+      "operating_profit": 2932000000
+    },
+    "023770": {
+      "revenue": 14500000000,
+      "operating_profit": -4953000000
+    },
+    "052770": {
+      "revenue": 28100000000,
+      "operating_profit": 254999999
+    },
+    "050120": {
+      "revenue": 75200000000,
+      "operating_profit": 2039999999
+    },
+    "035620": {
+      "revenue": 26000000000,
+      "operating_profit": -1622000000
+    },
+    "066910": {
+      "revenue": 66700000000,
+      "operating_profit": -898000000
+    },
+    "047560": {
+      "revenue": 88800000000,
+      "operating_profit": -639000000
+    },
+    "097950": {
+      "revenue": 30079500000000,
+      "operating_profit": 553000000
+    },
+    "001790": {
+      "revenue": 1378100000000,
+      "operating_profit": 276000000
+    },
+    "145990": {
+      "revenue": 2652400000000,
+      "operating_profit": 309000000
+    },
+    "001130": {
+      "revenue": 1368200000000,
+      "operating_profit": 316000000
+    },
+    "008040": {
+      "revenue": 631600000000,
+      "operating_profit": 242000000
+    },
+    "002680": {
+      "revenue": 99100000000,
+      "operating_profit": 34000000
+    },
+    "019680": {
+      "revenue": 683100000000,
+      "operating_profit": -731000000
+    },
+    "095720": {
+      "revenue": 933300000000,
+      "operating_profit": 295000000
+    },
+    "072870": {
+      "revenue": 121600000000,
+      "operating_profit": 1002000000
+    },
+    "067280": {
+      "revenue": 357500000000,
+      "operating_profit": 1148000000
+    },
+    "057030": {
+      "revenue": 62600000000,
+      "operating_profit": 764000000
+    },
+    "096240": {
+      "revenue": 227500000000,
+      "operating_profit": 1128000000
+    },
+    "040420": {
+      "revenue": 110800000000,
+      "operating_profit": 1510000000
+    },
+    "035290": {
+      "revenue": 9500000000,
+      "operating_profit": -1206000000
+    },
+    "053290": {
+      "revenue": 80200000000,
+      "operating_profit": 844000000
+    },
+    "100220": {
+      "revenue": 253000000000,
+      "operating_profit": 140000000
+    },
+    "068290": {
+      "revenue": 44900000000,
+      "operating_profit": -280000000
+    },
+    "036000": {
+      "revenue": 26400000000,
+      "operating_profit": 110000000
+    },
+    "020710": {
+      "revenue": 100200000000,
+      "operating_profit": -519000000
+    },
+    "005380": {
+      "revenue": 142151500000000,
+      "operating_profit": 691000000
+    },
+    "000270": {
+      "revenue": 86559000000000,
+      "operating_profit": 836000000
+    },
+    "012330": {
+      "revenue": 51906300000000,
+      "operating_profit": 390000000
+    },
+    "064960": {
+      "revenue": 1044900000000,
+      "operating_profit": 1071000000
+    },
+    "060980": {
+      "revenue": 1277100000000,
+      "operating_profit": 672000000
+    },
+    "018880": {
+      "revenue": 8627700000000,
+      "operating_profit": 297000000
+    },
+    "023800": {
+      "revenue": 570000000000,
+      "operating_profit": 299000000
+    },
+    "025540": {
+      "revenue": 1168100000000,
+      "operating_profit": 550000000
+    },
+    "010120": {
+      "revenue": 3377100000000,
+      "operating_profit": 555000000
+    },
+    "001820": {
+      "revenue": 263500000000,
+      "operating_profit": 1158000000
+    },
+    "072470": {
+      "revenue": 495500000000,
+      "operating_profit": -400000000
+    },
+    "092440": {
+      "revenue": 144400000000,
+      "operating_profit": 444000000
+    },
+    "044180": {
+      "revenue": 97100000000,
+      "operating_profit": -233000000
+    },
+    "071670": {
+      "revenue": 249500000000,
+      "operating_profit": 259000000
+    },
+    "049800": {
+      "revenue": 254600000000,
+      "operating_profit": 888000000
+    },
+    "015230": {
+      "revenue": 421500000000,
+      "operating_profit": 1183000000
+    },
+    "013570": {
+      "revenue": 1094800000000,
+      "operating_profit": 301000000
+    },
+    "109860": {
+      "revenue": 111400000000,
+      "operating_profit": 1250000000
+    },
+    "000150": {
+      "revenue": 16995800000000,
+      "operating_profit": 663000000
+    },
+    "042670": {
+      "revenue": 4756100000000,
+      "operating_profit": 699000000
+    },
+    "041440": {
+      "revenue": 374400000000,
+      "operating_profit": 419000000
+    },
+    "101170": {
+      "revenue": 68300000000,
+      "operating_profit": 788000000
+    },
+    "036890": {
+      "revenue": 541000000000,
+      "operating_profit": 1226000000
+    },
+    "009540": {
+      "revenue": 17302000000000,
+      "operating_profit": -204999999
+    },
+    "010240": {
+      "revenue": 134600000000,
+      "operating_profit": 833000000
+    },
+    "017550": {
+      "revenue": 286300000000,
+      "operating_profit": 789000000
+    },
+    "092200": {
+      "revenue": 695900000000,
+      "operating_profit": 450000000
+    },
+    "003010": {
+      "revenue": 178000000000,
+      "operating_profit": 151000000
+    },
+    "089140": {
+      "revenue": 23500000000,
+      "operating_profit": -1537000000
+    },
+    "019210": {
+      "revenue": 549800000000,
+      "operating_profit": 1321000000
+    },
+    "095190": {
+      "revenue": 95500000000,
+      "operating_profit": -239000000
+    },
+    "011210": {
+      "revenue": 8207600000000,
+      "operating_profit": 258000000
+    },
+    "010660": {
+      "revenue": 189700000000,
+      "operating_profit": 68000000
+    },
+    "000850": {
+      "revenue": 244100000000,
+      "operating_profit": 335000000
+    },
+    "009160": {
+      "revenue": 672200000000,
+      "operating_profit": 1769000000
+    },
+    "044780": {
+      "revenue": 81400000000,
+      "operating_profit": 714000000
+    },
+    "101680": {
+      "revenue": 42300000000,
+      "operating_profit": 359000000
+    },
+    "081000": {
+      "revenue": 186800000000,
+      "operating_profit": 175000000
+    },
+    "099440": {
+      "revenue": 159500000000,
+      "operating_profit": 736000000
+    },
+    "039560": {
+      "revenue": 80700000000,
+      "operating_profit": -70000000
+    },
+    "051980": {
+      "revenue": 26600000000,
+      "operating_profit": -1902000000
+    },
+    "069540": {
+      "revenue": 52600000000,
+      "operating_profit": 231999999
+    },
+    "014820": {
+      "revenue": 1437000000000,
+      "operating_profit": 639000000
+    },
+    "078070": {
+      "revenue": 151600000000,
+      "operating_profit": 1807999999
+    },
+    "010170": {
+      "revenue": 190100000000,
+      "operating_profit": 182000000
+    },
+    "091440": {
+      "revenue": 23000000000,
+      "operating_profit": -4060000000
+    },
+    "050890": {
+      "revenue": 279800000000,
+      "operating_profit": 1022000000
+    },
+    "032500": {
+      "revenue": 179500000000,
+      "operating_profit": -2507000000
+    },
+    "004690": {
+      "revenue": 5789100000000,
+      "operating_profit": 158000000
+    },
+    "017390": {
+      "revenue": 1724500000000,
+      "operating_profit": 19000000
+    },
+    "015360": {
+      "revenue": 1470200000000,
+      "operating_profit": 10000000
+    },
+    "012320": {
+      "revenue": 275500000000,
+      "operating_profit": 534000000
+    },
+    "034590": {
+      "revenue": 728500000000,
+      "operating_profit": 110000000
+    },
+    "053050": {
+      "revenue": 172600000000,
+      "operating_profit": 268000000
+    },
+    "117580": {
+      "revenue": 1020900000000,
+      "operating_profit": 9000000
+    },
+    "004370": {
+      "revenue": 3129100000000,
+      "operating_profit": 358000000
+    },
+    "003230": {
+      "revenue": 909000000000,
+      "operating_profit": 994000000
+    },
+    "007310": {
+      "revenue": 3183300000000,
+      "operating_profit": 583000000
+    },
+    "004380": {
+      "revenue": 339100000000,
+      "operating_profit": 609000000
+    },
+    "010820": {
+      "revenue": 160200000000,
+      "operating_profit": 194000000
+    },
+    "056080": {
+      "revenue": 44500000000,
+      "operating_profit": 1001000000
+    },
+    "090710": {
+      "revenue": 55500000000,
+      "operating_profit": -1346000000
+    },
+    "049950": {
+      "revenue": 154900000000,
+      "operating_profit": 1648000000
+    },
+    "090360": {
+      "revenue": 143200000000,
+      "operating_profit": 125000000
+    },
+    "089850": {
+      "revenue": 449300000000,
+      "operating_profit": 329000000
+    },
+    "041020": {
+      "revenue": 24200000000,
+      "operating_profit": 685000000
+    },
+    "089150": {
+      "revenue": 14600000000,
+      "operating_profit": 753000000
+    },
+    "030520": {
+      "revenue": 242000000000,
+      "operating_profit": 1034000000
+    },
+    "039290": {
+      "revenue": 140200000000,
+      "operating_profit": -25000000
+    },
+    "069410": {
+      "revenue": 53600000000,
+      "operating_profit": -74000000
+    },
+    "115450": {
+      "revenue": 42400000000,
+      "operating_profit": -1770000000
+    },
+    "051160": {
+      "revenue": 454600000000,
+      "operating_profit": -68000000
+    },
+    "064800": {
+      "revenue": 95500000000,
+      "operating_profit": -125000000
+    },
+    "108860": {
+      "revenue": 50900000000,
+      "operating_profit": 1013000000
+    },
+    "072130": {
+      "revenue": 30000000000,
+      "operating_profit": 281000000
+    },
+    "094480": {
+      "revenue": 112300000000,
+      "operating_profit": 766000000
+    },
+    "078000": {
+      "revenue": 42600000000,
+      "operating_profit": 671000000
+    },
+    "139670": {
+      "revenue": 19400000000,
+      "operating_profit": -8243000000
+    },
+    "075130": {
+      "revenue": 31400000000,
+      "operating_profit": 470000000
+    },
+    "089010": {
+      "revenue": 621000000000,
+      "operating_profit": 362000000
+    },
+    "043590": {
+      "revenue": 20900000000,
+      "operating_profit": -77000000
+    },
+    "061040": {
+      "revenue": 360600000000,
+      "operating_profit": 581000000
+    },
+    "030200": {
+      "revenue": 25650000000000,
+      "operating_profit": 659000000
+    },
+    "053210": {
+      "revenue": 1013700000000,
+      "operating_profit": 623000000
+    },
+    "032640": {
+      "revenue": 13906000000000,
+      "operating_profit": 778000000
+    },
+    "126560": {
+      "revenue": 154200000000,
+      "operating_profit": 617000000
+    },
+    "003240": {
+      "revenue": 2606600000000,
+      "operating_profit": -401000000
+    },
+    "037560": {
+      "revenue": 1167900000000,
+      "operating_profit": 461000000
+    },
+    "122450": {
+      "revenue": 326300000000,
+      "operating_profit": 2410000000
+    },
+    "034120": {
+      "revenue": 1173800000000,
+      "operating_profit": 1581000000
+    },
+    "040300": {
+      "revenue": 152200000000,
+      "operating_profit": 349000000
+    },
+    "030000": {
+      "revenue": 4253400000000,
+      "operating_profit": 732000000
+    },
+    "033830": {
+      "revenue": 42500000000,
+      "operating_profit": 953999999
+    },
+    "058400": {
+      "revenue": 66000000000,
+      "operating_profit": 1021000000
+    },
+    "052220": {
+      "revenue": 47500000000,
+      "operating_profit": 539000000
+    },
+    "036420": {
+      "revenue": 852100000000,
+      "operating_profit": -840000000
+    },
+    "006120": {
+      "revenue": 8717100000000,
+      "operating_profit": 415000000
+    },
+    "137950": {
+      "revenue": 511700000000,
+      "operating_profit": 833000000
+    },
+    "023150": {
+      "revenue": 110700000000,
+      "operating_profit": 1980000000
+    },
+    "068270": {
+      "revenue": 2284000000000,
+      "operating_profit": 2834000000
+    },
+    "086890": {
+      "revenue": 41200000000,
+      "operating_profit": -3894000000
+    },
+    "003060": {
+      "revenue": 65200000000,
+      "operating_profit": -833000000
+    },
+    "086900": {
+      "revenue": 195100000000,
+      "operating_profit": 2392000000
+    },
+    "128940": {
+      "revenue": 1331500000000,
+      "operating_profit": 1187000000
+    },
+    "127120": {
+      "revenue": 17000000000,
+      "operating_profit": -3031000000
+    },
+    "038290": {
+      "revenue": 138600000000,
+      "operating_profit": 382000000
+    },
+    "066700": {
+      "revenue": 190800000000,
+      "operating_profit": 620000000
+    },
+    "078160": {
+      "revenue": 64200000000,
+      "operating_profit": -2713000000
+    },
+    "085660": {
+      "revenue": 844600000000,
+      "operating_profit": -557000000
+    },
+    "005690": {
+      "revenue": 60200000000,
+      "operating_profit": 1474000000
+    },
+    "064550": {
+      "revenue": 218400000000,
+      "operating_profit": 528000000
+    },
+    "052260": {
+      "revenue": 99200000000,
+      "operating_profit": 913000000
+    },
+    "096530": {
+      "revenue": 853600000000,
+      "operating_profit": 2302000000
+    },
+    "004080": {
+      "revenue": 118200000000,
+      "operating_profit": 885000000
+    },
+    "099190": {
+      "revenue": 264800000000,
+      "operating_profit": 748000000
+    },
+    "036220": {
+      "revenue": 193900000000,
+      "operating_profit": 2543000000
+    },
+    "950130": {
+      "revenue": 1033900000000,
+      "operating_profit": 4538000000
+    },
+    "005930": {
+      "revenue": 302231400000000,
+      "operating_profit": 1435000000
+    },
+    "000660": {
+      "revenue": 44621600000000,
+      "operating_profit": 1526000000
+    },
+    "000990": {
+      "revenue": 1669500000000,
+      "operating_profit": 4564000000
+    },
+    "054450": {
+      "revenue": 150400000000,
+      "operating_profit": 610000000
+    },
+    "048870": {
+      "revenue": 86500000000,
+      "operating_profit": 2649000000
+    },
+    "080220": {
+      "revenue": 158300000000,
+      "operating_profit": 1663000000
+    },
+    "052860": {
+      "revenue": 39400000000,
+      "operating_profit": 622000000
+    },
+    "101400": {
+      "revenue": 24800000000,
+      "operating_profit": -71000000
+    },
+    "092600": {
+      "revenue": 92600000000,
+      "operating_profit": -3465000000
+    },
+    "038880": {
+      "revenue": 74200000000,
+      "operating_profit": -342000000
+    },
+    "117670": {
+      "revenue": 89800000000,
+      "operating_profit": -359000000
+    },
+    "123860": {
+      "revenue": 43300000000,
+      "operating_profit": -1620000000
+    },
+    "102120": {
+      "revenue": 242600000000,
+      "operating_profit": 1065000000
+    },
+    "098460": {
+      "revenue": 275400000000,
+      "operating_profit": 1607000000
+    },
+    "033170": {
+      "revenue": 287600000000,
+      "operating_profit": 309000000
+    },
+    "067310": {
+      "revenue": 894400000000,
+      "operating_profit": 1158000000
+    },
+    "036540": {
+      "revenue": 699400000000,
+      "operating_profit": 899000000
+    },
+    "074600": {
+      "revenue": 783200000000,
+      "operating_profit": 1470000000
+    },
+    "092070": {
+      "revenue": 135200000000,
+      "operating_profit": 1206000000
+    },
+    "084370": {
+      "revenue": 310600000000,
+      "operating_profit": 1727000000
+    },
+    "095610": {
+      "revenue": 358000000000,
+      "operating_profit": 1562000000
+    },
+    "068790": {
+      "revenue": 317000000000,
+      "operating_profit": 1689000000
+    },
+    "031980": {
+      "revenue": 72800000000,
+      "operating_profit": 2322000000
+    },
+    "061970": {
+      "revenue": 524600000000,
+      "operating_profit": 1083000000
+    },
+    "098120": {
+      "revenue": 61100000000,
+      "operating_profit": 1293000000
+    },
+    "033160": {
+      "revenue": 1023200000000,
+      "operating_profit": 785000000
+    },
+    "039030": {
+      "revenue": 447200000000,
+      "operating_profit": 2075000000
+    },
+    "042700": {
+      "revenue": 327600000000,
+      "operating_profit": 3415000000
+    },
+    "073570": {
+      "revenue": 20700000000,
+      "operating_profit": -1809000000
+    },
+    "086390": {
+      "revenue": 123800000000,
+      "operating_profit": -484000000
+    },
+    "089890": {
+      "revenue": 72900000000,
+      "operating_profit": 1172000000
+    },
+    "042660": {
+      "revenue": 4860200000000,
+      "operating_profit": -3320000000
+    },
+    "097230": {
+      "revenue": 1788200000000,
+      "operating_profit": 37000000
+    },
+    "003570": {
+      "revenue": 408000000000,
+      "operating_profit": 631000000
+    },
+    "047810": {
+      "revenue": 2786900000000,
+      "operating_profit": 508000000
+    },
+    "108380": {
+      "revenue": 130400000000,
+      "operating_profit": -758000000
+    },
+    "065450": {
+      "revenue": 74400000000,
+      "operating_profit": 222000000
+    },
+    "013810": {
+      "revenue": 31100000000,
+      "operating_profit": -1212000000
+    },
+    "006980": {
+      "revenue": 612300000000,
+      "operating_profit": -10000000
+    },
+    "136490": {
+      "revenue": 1870800000000,
+      "operating_profit": 377000000
+    },
+    "036580": {
+      "revenue": 1901500000000,
+      "operating_profit": 99000000
+    },
+    "002140": {
+      "revenue": 278400000000,
+      "operating_profit": 174000000
+    },
+    "027710": {
+      "revenue": 1426500000000,
+      "operating_profit": 221000000
+    },
+    "005860": {
+      "revenue": 408300000000,
+      "operating_profit": -202000000
+    },
+    "035810": {
+      "revenue": 3010300000000,
+      "operating_profit": 332000000
+    },
+    "025880": {
+      "revenue": 88500000000,
+      "operating_profit": 550000000
+    },
+    "069960": {
+      "revenue": 5014100000000,
+      "operating_profit": 640000000
+    },
+    "023530": {
+      "revenue": 15476000000000,
+      "operating_profit": 250000000
+    },
+    "004170": {
+      "revenue": 7812800000000,
+      "operating_profit": 826000000
+    },
+    "037710": {
+      "revenue": 184900000000,
+      "operating_profit": 3547999999
+    },
+    "006370": {
+      "revenue": 75900000000,
+      "operating_profit": -2148000000
+    },
+    "053800": {
+      "revenue": 228000000000,
+      "operating_profit": 1184000000
+    },
+    "136540": {
+      "revenue": 101400000000,
+      "operating_profit": 2167000000
+    },
+    "053350": {
+      "revenue": 53800000000,
+      "operating_profit": -465000000
+    },
+    "032830": {
+      "revenue": 34387000000000,
+      "operating_profit": 634000000
+    },
+    "088350": {
+      "revenue": 22258500000000,
+      "operating_profit": 565000000
+    },
+    "082640": {
+      "revenue": 3022600000000,
+      "operating_profit": 30000000
+    },
+    "000810": {
+      "revenue": 19611300000000,
+      "operating_profit": 1043000000
+    },
+    "005830": {
+      "revenue": 18932000000000,
+      "operating_profit": 1440000000
+    },
+    "001450": {
+      "revenue": 15351600000000,
+      "operating_profit": 1167000000
+    },
+    "000370": {
+      "revenue": 5892900000000,
+      "operating_profit": 348000000
+    },
+    "000400": {
+      "revenue": 2455300000000,
+      "operating_profit": -509999999
+    },
+    "003690": {
+      "revenue": 7689100000000,
+      "operating_profit": 458000000
+    },
+    "000540": {
+      "revenue": 3226800000000,
+      "operating_profit": 816000000
+    },
+    "004780": {
+      "revenue": 276000000000,
+      "operating_profit": 351000000
+    },
+    "053620": {
+      "revenue": 174200000000,
+      "operating_profit": 426999999
+    },
+    "010130": {
+      "revenue": 11219400000000,
+      "operating_profit": 819000000
+    },
+    "008350": {
+      "revenue": 255700000000,
+      "operating_profit": -97000000
+    },
+    "012800": {
+      "revenue": 1441300000000,
+      "operating_profit": 63000000
+    },
+    "021050": {
+      "revenue": 275700000000,
+      "operating_profit": 6000000
+    },
+    "000670": {
+      "revenue": 4429500000000,
+      "operating_profit": 155000000
+    },
+    "025820": {
+      "revenue": 429600000000,
+      "operating_profit": 319000000
+    },
+    "103140": {
+      "revenue": 4373000000000,
+      "operating_profit": 530000000
+    },
+    "009520": {
+      "revenue": 342200000000,
+      "operating_profit": 186000000
+    },
+    "004990": {
+      "revenue": 14111900000000,
+      "operating_profit": 347000000
+    },
+    "005180": {
+      "revenue": 1267700000000,
+      "operating_profit": 311000000
+    },
+    "115160": {
+      "revenue": 689500000000,
+      "operating_profit": -76000000
+    },
+    "057880": {
+      "revenue": 11600000000,
+      "operating_profit": -20938000000
+    },
+    "078890": {
+      "revenue": 611200000000,
+      "operating_profit": 235000000
+    },
+    "064240": {
+      "revenue": 73300000000,
+      "operating_profit": 52000000
+    },
+    "086960": {
+      "revenue": 153500000000,
+      "operating_profit": 530999999
+    },
+    "038950": {
+      "revenue": 91100000000,
+      "operating_profit": -405999999
+    },
+    "084730": {
+      "revenue": 336700000000,
+      "operating_profit": 132000000
+    },
+    "006040": {
+      "revenue": 9026300000000,
+      "operating_profit": 548000000
+    },
+    "007160": {
+      "revenue": 661000000000,
+      "operating_profit": 835000000
+    },
+    "004970": {
+      "revenue": 432600000000,
+      "operating_profit": 334000000
+    },
+    "006090": {
+      "revenue": 369100000000,
+      "operating_profit": 276000000
+    },
+    "003960": {
+      "revenue": 2018800000000,
+      "operating_profit": 484000000
+    },
+    "030720": {
+      "revenue": 177000000000,
+      "operating_profit": 328000000
+    },
+    "003680": {
+      "revenue": 292200000000,
+      "operating_profit": 242000000
+    },
+    "011150": {
+      "revenue": 152700000000,
+      "operating_profit": 271000000
+    },
+    "000640": {
+      "revenue": 1014900000000,
+      "operating_profit": 373000000
+    },
+    "048530": {
+      "revenue": 14000000000,
+      "operating_profit": -1056000000
+    },
+    "006260": {
+      "revenue": 17491300000000,
+      "operating_profit": 383000000
+    },
+    "002230": {
+      "revenue": 71000000000,
+      "operating_profit": -259000000
+    },
+    "057540": {
+      "revenue": 98000000000,
+      "operating_profit": 190000000
+    },
+    "017040": {
+      "revenue": 138200000000,
+      "operating_profit": 335000000
+    },
+    "103590": {
+      "revenue": 1164700000000,
+      "operating_profit": 270000000
+    },
+    "004800": {
+      "revenue": 3719300000000,
+      "operating_profit": 175000000
+    },
+    "040160": {
+      "revenue": 124700000000,
+      "operating_profit": 833000000
+    },
+    "080530": {
+      "revenue": 55200000000,
+      "operating_profit": -942000000
+    },
+    "054220": {
+      "revenue": 9000000000,
+      "operating_profit": -2625000000
+    },
+    "033240": {
+      "revenue": 292300000000,
+      "operating_profit": -401999999
+    },
+    "091700": {
+      "revenue": 1221900000000,
+      "operating_profit": 465000000
+    },
+    "050110": {
+      "revenue": 721700000000,
+      "operating_profit": 358000000
+    },
+    "122990": {
+      "revenue": 345900000000,
+      "operating_profit": -375000000
+    },
+    "049070": {
+      "revenue": 1098000000000,
+      "operating_profit": 1291000000
+    },
+    "091120": {
+      "revenue": 415800000000,
+      "operating_profit": 816000000
+    },
+    "052710": {
+      "revenue": 215700000000,
+      "operating_profit": -198000000
+    },
+    "080420": {
+      "revenue": 411300000000,
+      "operating_profit": 563000000
+    },
+    "002030": {
+      "revenue": 2072300000000,
+      "operating_profit": 1122000000
+    },
+    "003300": {
+      "revenue": 1965600000000,
+      "operating_profit": 674000000
+    },
+    "004980": {
+      "revenue": 1030400000000,
+      "operating_profit": 18000000
+    },
+    "038500": {
+      "revenue": 721100000000,
+      "operating_profit": 986000000
+    },
+    "051500": {
+      "revenue": 2747700000000,
+      "operating_profit": 356000000
+    },
+    "031440": {
+      "revenue": 1411300000000,
+      "operating_profit": 146000000
+    },
+    "005440": {
+      "revenue": 1957000000000,
+      "operating_profit": -157000000
+    },
+    "000100": {
+      "revenue": 1775800000000,
+      "operating_profit": 202999999
+    },
+    "006280": {
+      "revenue": 1711300000000,
+      "operating_profit": 475000000
+    },
+    "065650": {
+      "revenue": 45300000000,
+      "operating_profit": -896000000
+    },
+    "084990": {
+      "revenue": 2800000000,
+      "operating_profit": -187809000000
+    },
+    "140410": {
+      "revenue": 30700000000,
+      "operating_profit": -7593000000
+    },
+    "060590": {
+      "revenue": 165200000000,
+      "operating_profit": 680000000
+    },
+    "048910": {
+      "revenue": 303500000000,
+      "operating_profit": 470000000
+    },
+    "039830": {
+      "revenue": 231700000000,
+      "operating_profit": 792000000
+    },
+    "014100": {
+      "revenue": 71400000000,
+      "operating_profit": 225000000
+    },
+    "013990": {
+      "revenue": 174300000000,
+      "operating_profit": 833000000
+    },
+    "159580": {
+      "revenue": 90400000000,
+      "operating_profit": 1033000000
+    },
+    "005990": {
+      "revenue": 1979300000000,
+      "operating_profit": 371000000
+    },
+    "003920": {
+      "revenue": 964700000000,
+      "operating_profit": -900000000
+    },
+    "138490": {
+      "revenue": 518100000000,
+      "operating_profit": 889000000
+    },
+    "126600": {
+      "revenue": 263300000000,
+      "operating_profit": 605000000
+    },
+    "089470": {
+      "revenue": 1038400000000,
+      "operating_profit": 217000000
+    },
+    "039130": {
+      "revenue": 115000000000,
+      "operating_profit": -8801000000
+    },
+    "080160": {
+      "revenue": 29400000000,
+      "operating_profit": -7506000000
+    },
+    "038390": {
+      "revenue": 262100000000,
+      "operating_profit": 1386000000
+    },
+    "039310": {
+      "revenue": 38100000000,
+      "operating_profit": -570000000
+    },
+    "094850": {
+      "revenue": 13600000000,
+      "operating_profit": -11581000000
+    },
+    "086520": {
+      "revenue": 5639700000000,
+      "operating_profit": 1087000000
+    },
+    "119650": {
+      "revenue": 421600000000,
+      "operating_profit": 86000000
+    },
+    "001120": {
+      "revenue": 18759500000000,
+      "operating_profit": 515000000
+    },
+    "034020": {
+      "revenue": 15421100000000,
+      "operating_profit": 717000000
+    },
+    "069260": {
+      "revenue": 1235800000000,
+      "operating_profit": 948000000
+    },
+    "099320": {
+      "revenue": 91400000000,
+      "operating_profit": -846000000
+    },
+    "045100": {
+      "revenue": 1162900000000,
+      "operating_profit": 647000000
+    },
+    "078350": {
+      "revenue": 484800000000,
+      "operating_profit": 1090000000
+    },
+    "042370": {
+      "revenue": 347700000000,
+      "operating_profit": 941000000
+    },
+    "086280": {
+      "revenue": 26981900000000,
+      "operating_profit": 667000000
+    },
+    "000120": {
+      "revenue": 12130700000000,
+      "operating_profit": 340000000
+    },
+    "002320": {
+      "revenue": 2849400000000,
+      "operating_profit": 401999999
+    },
+    "009180": {
+      "revenue": 1015400000000,
+      "operating_profit": 358000000
+    },
+    "003490": {
+      "revenue": 14096100000000,
+      "operating_profit": 2007999999
+    },
+    "020560": {
+      "revenue": 6206700000000,
+      "operating_profit": 965000000
+    },
+    "011200": {
+      "revenue": 18582800000000,
+      "operating_profit": 5354000000
+    },
+    "028670": {
+      "revenue": 6420300000000,
+      "operating_profit": 1230000000
+    },
+    "005880": {
+      "revenue": 1612000000000,
+      "operating_profit": 1661000000
+    },
+    "003280": {
+      "revenue": 177900000000,
+      "operating_profit": 1669000000
+    },
+    "004140": {
+      "revenue": 758500000000,
+      "operating_profit": 363000000
+    },
+    "004360": {
+      "revenue": 1290400000000,
+      "operating_profit": 350000000
+    },
+    "129260": {
+      "revenue": 720000000000,
+      "operating_profit": 492000000
+    },
+    "083650": {
+      "revenue": 330200000000,
+      "operating_profit": 246000000
+    },
+    "014620": {
+      "revenue": 244000000000,
+      "operating_profit": 1097000000
+    },
+    "023160": {
+      "revenue": 249700000000,
+      "operating_profit": 1816000000
+    },
+    "044490": {
+      "revenue": 393900000000,
+      "operating_profit": 74000000
+    },
+    "013030": {
+      "revenue": 182900000000,
+      "operating_profit": 2226000000
+    },
+    "100840": {
+      "revenue": 202900000000,
+      "operating_profit": 175000000
+    },
+    "105840": {
+      "revenue": 124100000000,
+      "operating_profit": 959000000
+    },
+    "094820": {
+      "revenue": 196000000000,
+      "operating_profit": 913000000
+    },
+    "136480": {
+      "revenue": 1342900000000,
+      "operating_profit": 349000000
+    },
+    "027740": {
+      "revenue": 320600000000,
+      "operating_profit": -217000000
+    },
+    "088910": {
+      "revenue": 336800000000,
+      "operating_profit": 354000000
+    },
+    "105560": {
+      "revenue": 83062100000000,
+      "operating_profit": 637000000
+    },
+    "055550": {
+      "revenue": 31655300000000,
+      "operating_profit": 1866000000
+    },
+    "086790": {
+      "revenue": 70248300000000,
+      "operating_profit": 667000000
+    },
+    "138930": {
+      "revenue": 7572800000000,
+      "operating_profit": 1527000000
+    },
+    "139130": {
+      "revenue": 6627100000000,
+      "operating_profit": 938000000
+    },
+    "024110": {
+      "revenue": 27509200000000,
+      "operating_profit": 1326000000
+    },
+    "006220": {
+      "revenue": 275600000000,
+      "operating_profit": 980000000
+    },
+    "006140": {
+      "revenue": 157700000000,
+      "operating_profit": 386000000
+    },
+    "041830": {
+      "revenue": 160000000000,
+      "operating_profit": 2544000000
+    },
+    "065510": {
+      "revenue": 108800000000,
+      "operating_profit": 1847000000
+    },
+    "002810": {
+      "revenue": 492500000000,
+      "operating_profit": 393000000
+    },
+    "119610": {
+      "revenue": 117800000000,
+      "operating_profit": 2052000000
+    },
+    "039840": {
+      "revenue": 131300000000,
+      "operating_profit": -336000000
+    },
+    "043150": {
+      "revenue": 395100000000,
+      "operating_profit": 2016000000
+    },
+    "100120": {
+      "revenue": 237900000000,
+      "operating_profit": 1835000000
+    },
+    "111770": {
+      "revenue": 3911000000000,
+      "operating_profit": 2104000000
+    },
+    "105630": {
+      "revenue": 2204800000000,
+      "operating_profit": 814000000
+    },
+    "009270": {
+      "revenue": 995400000000,
+      "operating_profit": 335000000
+    },
+    "007980": {
+      "revenue": 1084600000000,
+      "operating_profit": 631000000
+    },
+    "093050": {
+      "revenue": 1968500000000,
+      "operating_profit": 941000000
+    },
+    "120110": {
+      "revenue": 5367500000000,
+      "operating_profit": 451999999
+    },
+    "009970": {
+      "revenue": 4533900000000,
+      "operating_profit": 2211000000
+    },
+    "000680": {
+      "revenue": 362900000000,
+      "operating_profit": 221000000
+    },
+    "081660": {
+      "revenue": 4221800000000,
+      "operating_profit": 1030000000
+    },
+    "025440": {
+      "revenue": 381800000000,
+      "operating_profit": 61000000
+    },
+    "005850": {
+      "revenue": 4174500000000,
+      "operating_profit": 474000000
+    },
+    "043370": {
+      "revenue": 1024400000000,
+      "operating_profit": 223000000
+    },
+    "012860": {
+      "revenue": 922200000000,
+      "operating_profit": 476000000
+    },
+    "015750": {
+      "revenue": 3976800000000,
+      "operating_profit": 258000000
+    },
+    "010690": {
+      "revenue": 1690300000000,
+      "operating_profit": 517000000
+    },
+    "018500": {
+      "revenue": 538600000000,
+      "operating_profit": 660000000
+    },
+    "038110": {
+      "revenue": 1821500000000,
+      "operating_profit": 211000000
+    },
+    "047050": {
+      "revenue": 37989600000000,
+      "operating_profit": 238000000
+    },
+    "001740": {
+      "revenue": 9426200000000,
+      "operating_profit": 188000000
+    },
+    "036460": {
+      "revenue": 51724300000000,
+      "operating_profit": 476000000
+    },
+    "011760": {
+      "revenue": 6127000000000,
+      "operating_profit": 109000000
+    },
+    "012170": {
+      "revenue": 12500000000,
+      "operating_profit": -6287000000
+    },
+    "128820": {
+      "revenue": 1871300000000,
+      "operating_profit": 258000000
+    },
+    "024950": {
+      "revenue": 113100000000,
+      "operating_profit": 188000000
+    },
+    "123750": {
+      "revenue": 51300000000,
+      "operating_profit": 405999999
+    },
+    "035600": {
+      "revenue": 1177600000000,
+      "operating_profit": 903999999
+    },
+    "060250": {
+      "revenue": 822800000000,
+      "operating_profit": 537000000
+    },
+    "046440": {
+      "revenue": 276100000000,
+      "operating_profit": 1459000000
+    },
+    "115310": {
+      "revenue": 20900000000,
+      "operating_profit": 3281000000
+    },
+    "064260": {
+      "revenue": 294900000000,
+      "operating_profit": -93000000
+    },
+    "025770": {
+      "revenue": 595500000000,
+      "operating_profit": 455000000
+    },
+    "036800": {
+      "revenue": 804900000000,
+      "operating_profit": 597000000
+    },
+    "038460": {
+      "revenue": 391800000000,
+      "operating_profit": 259000000
+    },
+    "054920": {
+      "revenue": 28700000000,
+      "operating_profit": -240000000
+    },
+    "052400": {
+      "revenue": 242200000000,
+      "operating_profit": 2016000000
+    },
+    "092130": {
+      "revenue": 47100000000,
+      "operating_profit": 4092000000
+    },
+    "122900": {
+      "revenue": 3588200000000,
+      "operating_profit": 157000000
+    },
+    "080010": {
+      "revenue": 70000000000,
+      "operating_profit": 1901000000
+    },
+    "053280": {
+      "revenue": 663800000000,
+      "operating_profit": 237000000
+    },
+    "035080": {
+      "revenue": 3584800000000,
+      "operating_profit": 41000000
+    },
+    "060570": {
+      "revenue": 274400000000,
+      "operating_profit": -316000000
+    },
+    "001800": {
+      "revenue": 2934600000000,
+      "operating_profit": 1362000000
+    },
+    "005740": {
+      "revenue": 979100000000,
+      "operating_profit": 393000000
+    },
+    "016590": {
+      "revenue": 676400000000,
+      "operating_profit": 752000000
+    },
+    "002310": {
+      "revenue": 1023400000000,
+      "operating_profit": 1069999999
+    },
+    "011280": {
+      "revenue": 784000000000,
+      "operating_profit": 394000000
+    },
+    "002200": {
+      "revenue": 341400000000,
+      "operating_profit": 753000000
+    },
+    "004150": {
+      "revenue": 467200000000,
+      "operating_profit": 409000000
+    },
+    "002870": {
+      "revenue": 18800000000,
+      "operating_profit": -2237000000
+    },
+    "078130": {
+      "revenue": 112500000000,
+      "operating_profit": -982000000
+    },
+    "009200": {
+      "revenue": 1399100000000,
+      "operating_profit": 688000000
+    },
+    "004540": {
+      "revenue": 606500000000,
+      "operating_profit": 62000000
+    },
+    "001020": {
+      "revenue": 410000000000,
+      "operating_profit": 630000000
+    },
+    "010140": {
+      "revenue": 5944700000000,
+      "operating_profit": -1437000000
+    },
+    "082740": {
+      "revenue": 764200000000,
+      "operating_profit": -386000000
+    },
+    "017960": {
+      "revenue": 369300000000,
+      "operating_profit": 671000000
+    },
+    "033500": {
+      "revenue": 434200000000,
+      "operating_profit": 352000000
+    },
+    "100090": {
+      "revenue": 691800000000,
+      "operating_profit": 1040000000
+    },
+    "014940": {
+      "revenue": 131600000000,
+      "operating_profit": 698000000
+    },
+    "000080": {
+      "revenue": 2497600000000,
+      "operating_profit": 763000000
+    },
+    "005300": {
+      "revenue": 2841700000000,
+      "operating_profit": 784000000
+    },
+    "033920": {
+      "revenue": 152800000000,
+      "operating_profit": 1023000000
+    },
+    "043650": {
+      "revenue": 74600000000,
+      "operating_profit": 1226000000
+    },
+    "018120": {
+      "revenue": 99600000000,
+      "operating_profit": 381000000
+    },
+    "023900": {
+      "revenue": 154000000000,
+      "operating_profit": 245000000
+    },
+    "017890": {
+      "revenue": 512700000000,
+      "operating_profit": 492000000
+    },
+    "084870": {
+      "revenue": 203100000000,
+      "operating_profit": 96000000
+    },
+    "090430": {
+      "revenue": 4134900000000,
+      "operating_profit": 518000000
+    },
+    "021240": {
+      "revenue": 3856100000000,
+      "operating_profit": 1757000000
+    },
+    "123330": {
+      "revenue": 31400000000,
+      "operating_profit": -1009000000
+    },
+    "090370": {
+      "revenue": 22700000000,
+      "operating_profit": -903999999
+    },
+    "014470": {
+      "revenue": 338500000000,
+      "operating_profit": 27000000
+    },
+    "030610": {
+      "revenue": 4065900000000,
+      "operating_profit": 127000000
+    },
+    "003540": {
+      "revenue": 4231300000000,
+      "operating_profit": 599000000
+    },
+    "006800": {
+      "revenue": 19160800000000,
+      "operating_profit": 436000000
+    },
+    "016610": {
+      "revenue": 1223200000000,
+      "operating_profit": 195000000
+    },
+    "003470": {
+      "revenue": 2479000000000,
+      "operating_profit": 175000000
+    },
+    "001270": {
+      "revenue": 983400000000,
+      "operating_profit": 615000000
+    },
+    "016360": {
+      "revenue": 13486900000000,
+      "operating_profit": 429000000
+    },
+    "001720": {
+      "revenue": 2353500000000,
+      "operating_profit": 491000000
+    },
+    "005940": {
+      "revenue": 11227400000000,
+      "operating_profit": 463999999
+    },
+    "001200": {
+      "revenue": 1821600000000,
+      "operating_profit": 100000000
+    },
+    "003460": {
+      "revenue": 22100000000,
+      "operating_profit": -1307000000
+    },
+    "078020": {
+      "revenue": 1348600000000,
+      "operating_profit": 310000000
+    },
+    "039490": {
+      "revenue": 8942400000000,
+      "operating_profit": 734000000
+    },
+    "071050": {
+      "revenue": 22939500000000,
+      "operating_profit": 238000000
+    },
+    "001750": {
+      "revenue": 1117100000000,
+      "operating_profit": 333000000
+    },
+    "003530": {
+      "revenue": 2114300000000,
+      "operating_profit": 163000000
+    },
+    "001500": {
+      "revenue": 1186000000000,
+      "operating_profit": 966000000
+    },
+    "030210": {
+      "revenue": 1842000000000,
+      "operating_profit": 581000000
+    },
+    "001510": {
+      "revenue": 1250700000000,
+      "operating_profit": 143000000
+    },
+    "021080": {
+      "revenue": 101000000000,
+      "operating_profit": 3481000000
+    },
+    "019550": {
+      "revenue": 16900000000,
+      "operating_profit": -8879000000
+    },
+    "026890": {
+      "revenue": 60400000000,
+      "operating_profit": 1711000000
+    },
+    "035250": {
+      "revenue": 1270700000000,
+      "operating_profit": 1712000000
+    },
+    "034230": {
+      "revenue": 587600000000,
+      "operating_profit": 177000000
+    },
+    "114090": {
+      "revenue": 262100000000,
+      "operating_profit": -530999999
+    },
+    "052330": {
+      "revenue": 428600000000,
+      "operating_profit": 638000000
+    },
+    "051360": {
+      "revenue": 328200000000,
+      "operating_profit": 215000000
+    },
+    "054780": {
+      "revenue": 62000000000,
+      "operating_profit": -387000000
+    },
+    "079160": {
+      "revenue": 1273200000000,
+      "operating_profit": -552000000
+    },
+    "046390": {
+      "revenue": 82300000000,
+      "operating_profit": 1308000000
+    },
+    "047820": {
+      "revenue": 192500000000,
+      "operating_profit": 290000000
+    },
+    "086980": {
+      "revenue": 56700000000,
+      "operating_profit": -563000000
+    },
+    "068050": {
+      "revenue": 25300000000,
+      "operating_profit": 366000000
+    },
+    "048550": {
+      "revenue": 157900000000,
+      "operating_profit": 127000000
+    },
+    "066410": {
+      "revenue": 24400000000,
+      "operating_profit": -2471000000
+    },
+    "043610": {
+      "revenue": 286100000000,
+      "operating_profit": 483000000
+    },
+    "041510": {
+      "revenue": 850800000000,
+      "operating_profit": 1069999999
+    },
+    "104200": {
+      "revenue": 65800000000,
+      "operating_profit": 316000000
+    },
+    "122870": {
+      "revenue": 391200000000,
+      "operating_profit": 1192000000
+    },
+    "035900": {
+      "revenue": 345900000000,
+      "operating_profit": 2794000000
+    },
+    "182360": {
+      "revenue": 120600000000,
+      "operating_profit": 574000000
+    },
+    "173940": {
+      "revenue": 65800000000,
+      "operating_profit": -2004000000
+    },
+    "160550": {
+      "revenue": 155600000000,
+      "operating_profit": 463999999
+    },
+    "058860": {
+      "revenue": 535800000000,
+      "operating_profit": 365000000
+    },
+    "058850": {
+      "revenue": 1029500000000,
+      "operating_profit": 236000000
+    },
+    "049080": {
+      "revenue": 54700000000,
+      "operating_profit": -1298000000
+    },
+    "093190": {
+      "revenue": 134900000000,
+      "operating_profit": 1863000000
+    },
+    "154040": {
+      "revenue": 157900000000,
+      "operating_profit": 359000000
+    },
+    "094840": {
+      "revenue": 17300000000,
+      "operating_profit": 2052000000
+    },
+    "095340": {
+      "revenue": 178900000000,
+      "operating_profit": 3124000000
+    },
+    "096610": {
+      "revenue": 33200000000,
+      "operating_profit": -3157000000
+    },
+    "114630": {
+      "revenue": 97000000000,
+      "operating_profit": 771000000
+    },
+    "089030": {
+      "revenue": 267500000000,
+      "operating_profit": 2156000000
+    },
+    "076610": {
+      "revenue": 163800000000,
+      "operating_profit": -313000000
+    },
+    "126700": {
+      "revenue": 197700000000,
+      "operating_profit": 1269000000
+    },
+    "101390": {
+      "revenue": 117400000000,
+      "operating_profit": -835000000
+    },
+    "017670": {
+      "revenue": 17305000000000,
+      "operating_profit": 932000000
+    },
+    "093320": {
+      "revenue": 110900000000,
+      "operating_profit": 2332000000
+    },
+    "100030": {
+      "revenue": 23600000000,
+      "operating_profit": 2064000000
+    },
+    "205100": {
+      "revenue": 55100000000,
+      "operating_profit": 2273000000
+    },
+    "161390": {
+      "revenue": 8394200000000,
+      "operating_profit": 841000000
+    },
+    "002350": {
+      "revenue": 2597400000000,
+      "operating_profit": -209000000
+    },
+    "073240": {
+      "revenue": 3559200000000,
+      "operating_profit": 65000000
+    },
+    "007340": {
+      "revenue": 3156400000000,
+      "operating_profit": 1336000000
+    },
+    "097780": {
+      "revenue": 155300000000,
+      "operating_profit": -560000000
+    },
+    "060720": {
+      "revenue": 336100000000,
+      "operating_profit": 1051000000
+    },
+    "045970": {
+      "revenue": 459700000000,
+      "operating_profit": -491000000
+    },
+    "095910": {
+      "revenue": 208700000000,
+      "operating_profit": -426999999
+    },
+    "099220": {
+      "revenue": 104500000000,
+      "operating_profit": 27000000
+    },
+    "011790": {
+      "revenue": 2386700000000,
+      "operating_profit": 780000000
+    },
+    "078600": {
+      "revenue": 174100000000,
+      "operating_profit": 688000000
+    },
+    "064760": {
+      "revenue": 319600000000,
+      "operating_profit": 3975000000
+    },
+    "052420": {
+      "revenue": 117100000000,
+      "operating_profit": 1104000000
+    },
+    "011930": {
+      "revenue": 664100000000,
+      "operating_profit": 316000000
+    },
+    "010060": {
+      "revenue": 2768900000000,
+      "operating_profit": 2717000000
+    },
+    "035460": {
+      "revenue": 67800000000,
+      "operating_profit": 681000000
+    },
+    "073490": {
+      "revenue": 132900000000,
+      "operating_profit": 1079000000
+    },
+    "093920": {
+      "revenue": 316800000000,
+      "operating_profit": 712000000
+    },
+    "031820": {
+      "revenue": 709800000000,
+      "operating_profit": 224000000
+    },
+    "088800": {
+      "revenue": 240400000000,
+      "operating_profit": -834000000
+    },
+    "073540": {
+      "revenue": 18600000000,
+      "operating_profit": -2406000000
+    },
+    "033790": {
+      "revenue": 11400000000,
+      "operating_profit": 1282000000
+    },
+    "067900": {
+      "revenue": 123800000000,
+      "operating_profit": 2706000000
+    },
+    "060150": {
+      "revenue": 237600000000,
+      "operating_profit": 1398000000
+    },
+    "035890": {
+      "revenue": 1437700000000,
+      "operating_profit": 1433000000
+    },
+    "054940": {
+      "revenue": 226800000000,
+      "operating_profit": 411000000
+    },
+    "011370": {
+      "revenue": 730000000000,
+      "operating_profit": 819999999
+    },
+    "009440": {
+      "revenue": 643400000000,
+      "operating_profit": 177000000
+    },
+    "089230": {
+      "revenue": 46600000000,
+      "operating_profit": -496000000
+    },
+    "018000": {
+      "revenue": 239200000000,
+      "operating_profit": 79000000
+    },
+    "054540": {
+      "revenue": 90700000000,
+      "operating_profit": -351000000
+    },
+    "100130": {
+      "revenue": 477100000000,
+      "operating_profit": -239000000
+    },
+    "004890": {
+      "revenue": 498100000000,
+      "operating_profit": 454000000
+    },
+    "015890": {
+      "revenue": 733400000000,
+      "operating_profit": 749000000
+    },
+    "011780": {
+      "revenue": 7975600000000,
+      "operating_profit": 1438000000
+    },
+    "011170": {
+      "revenue": 22276100000000,
+      "operating_profit": -342000000
+    },
+    "010950": {
+      "revenue": 42446000000000,
+      "operating_profit": 802000000
+    },
+    "079980": {
+      "revenue": 1021700000000,
+      "operating_profit": -811999999
+    },
+    "104480": {
+      "revenue": 621000000000,
+      "operating_profit": 369000000
+    },
+    "006380": {
+      "revenue": 427200000000,
+      "operating_profit": -2863000000
+    },
+    "006650": {
+      "revenue": 2222100000000,
+      "operating_profit": -966000000
+    },
+    "035760": {
+      "revenue": 4792200000000,
+      "operating_profit": 287000000
+    },
+    "057050": {
+      "revenue": 2101700000000,
+      "operating_profit": 526000000
+    },
+    "015590": {
+      "revenue": 105700000000,
+      "operating_profit": 1224000000
+    },
+    "051900": {
+      "revenue": 7185800000000,
+      "operating_profit": 990000000
+    },
+    "027050": {
+      "revenue": 80400000000,
+      "operating_profit": 109000000
+    },
+    "123690": {
+      "revenue": 66000000000,
+      "operating_profit": -3000000
+    },
+    "003350": {
+      "revenue": 103900000000,
+      "operating_profit": 416000000
+    },
+    "043910": {
+      "revenue": 73900000000,
+      "operating_profit": 63000000
+    },
+    "036010": {
+      "revenue": 164700000000,
+      "operating_profit": 686000000
+    },
+    "079190": {
+      "revenue": 55600000000,
+      "operating_profit": -681000000
+    },
+    "101330": {
+      "revenue": 1326900000000,
+      "operating_profit": 532000000
+    },
+    "012340": {
+      "revenue": 75300000000,
+      "operating_profit": -1091000000
+    },
+    "005680": {
+      "revenue": 227800000000,
+      "operating_profit": 715000000
+    },
+    "009470": {
+      "revenue": 239100000000,
+      "operating_profit": 571000000
+    },
+    "043260": {
+      "revenue": 153600000000,
+      "operating_profit": 133000000
+    },
+    "033290": {
+      "revenue": 822000000000,
+      "operating_profit": 475000000
+    },
+    "014910": {
+      "revenue": 50000000000,
+      "operating_profit": 494000000
+    },
+    "082210": {
+      "revenue": 198200000000,
+      "operating_profit": -2496000000
+    },
+    "097520": {
+      "revenue": 1108600000000,
+      "operating_profit": 97000000
+    },
+    "053450": {
+      "revenue": 479600000000,
+      "operating_profit": 128000000
+    },
+    "049630": {
+      "revenue": 119600000000,
+      "operating_profit": 455000000
+    },
+    "082660": {
+      "revenue": 9000000000,
+      "operating_profit": -8550000000
+    },
+    "083470": {
+      "revenue": 34500000000,
+      "operating_profit": 200000000
+    },
+    "065680": {
+      "revenue": 186400000000,
+      "operating_profit": 1102000000
+    },
+    "025320": {
+      "revenue": 244800000000,
+      "operating_profit": 525000000
+    },
+    "024890": {
+      "revenue": 146800000000,
+      "operating_profit": -504000000
+    },
+    "000910": {
+      "revenue": 235000000000,
+      "operating_profit": 123000000
+    },
+    "037370": {
+      "revenue": 70200000000,
+      "operating_profit": -1220000000
+    },
+    "003670": {
+      "revenue": 3301900000000,
+      "operating_profit": 501999999
+    }
+  }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thema Signal - 테마주 초기 상승 포착</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="logo">📈 Thema Signal</h1>
+                    <p class="tagline">테마주 초기 상승을 포착하세요</p>
+                </div>
+                <div class="crawl-controls">
+                    <button class="crawl-btn" data-type="daily" title="가격 + 시장 데이터">
+                        📊 일별 수집
+                    </button>
+                    <button class="crawl-btn" data-type="weekly" title="테마 + 종목 데이터">
+                        📅 주간 수집
+                    </button>
+                    <button class="crawl-btn" data-type="quarterly" title="재무 데이터">
+                        📈 분기 수집
+                    </button>
+                    <span class="crawl-status" id="crawlStatus"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 기간 선택 탭 -->
+        <div class="period-tabs">
+            <button class="tab active" data-period="3w">3주 순위</button>
+            <button class="tab" data-period="6w">6주 순위</button>
+            <button class="tab" data-period="9w">9주 순위</button>
+        </div>
+
+        <!-- 테마 순위 리스트 -->
+        <section class="theme-ranking" id="themeRanking">
+            <!-- JavaScript로 동적 생성 -->
+        </section>
+
+        <!-- 테마 상세 모달 -->
+        <div class="modal" id="themeModal">
+            <div class="modal-content">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div id="themeDetail">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>⚠️ 투자 참고용 정보이며, 투자 판단의 책임은 본인에게 있습니다.</p>
+            <p>데이터 기준: 2025-01-20 장 마감 기준</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>
