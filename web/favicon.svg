@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- 배경 -->
+  <rect width="32" height="32" rx="6" fill="#1a1a2e"/>
+
+  <!-- 상승 차트 라인 -->
+  <polyline
+    points="4,24 10,20 16,22 22,14 28,8"
+    fill="none"
+    stroke="#ff4757"
+    stroke-width="3"
+    stroke-linecap="round"
+    stroke-linejoin="round"/>
+
+  <!-- 상승 화살표 -->
+  <polygon
+    points="28,8 28,14 22,8"
+    fill="#ff4757"/>
+</svg>
