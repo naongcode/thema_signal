@@ -11,8 +11,8 @@ import time
 class MarketCrawler:
     """시장 데이터 크롤러 (시총, 주식수, PER, PBR)"""
 
-    # TR 요청 간 대기 시간 (초)
-    REQUEST_INTERVAL = 0.5
+    # TR 요청 간 대기 시간 (초) - 키움 API 제한: 조회TR 3.6초/1회
+    REQUEST_INTERVAL = 3.7
 
     def __init__(self, api: KiwoomAPI):
         self.api = api

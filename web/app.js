@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', async () => {
     setupEventListeners();
 });
 
-// API 서버 주소
-const API_BASE = 'http://localhost:5000';
-
 // 로딩 표시
 function showLoading(show) {
     const container = document.getElementById('themeRanking');
@@ -68,87 +65,6 @@ function setupEventListeners() {
             closeModal();
         }
     });
-
-    // 크롤링 버튼 클릭
-    document.querySelectorAll('.crawl-btn').forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.stopPropagation();
-            const type = btn.dataset.type;
-            startCrawling(type);
-        });
-    });
-}
-
-// 크롤링 시작
-async function startCrawling(type) {
-    const statusEl = document.getElementById('crawlStatus');
-    const buttons = document.querySelectorAll('.crawl-btn');
-
-    // 버튼 비활성화
-    buttons.forEach(btn => btn.disabled = true);
-    statusEl.textContent = `${type} 수집 시작 중...`;
-    statusEl.className = 'crawl-status loading';
-
-    try {
-        const response = await fetch(`${API_BASE}/api/crawl/${type}`, {
-            method: 'POST'
-        });
-
-        if (!response.ok) {
-            const error = await response.json();
-            throw new Error(error.error || '수집 요청 실패');
-        }
-
-        // 상태 폴링 시작
-        pollCrawlStatus();
-
-    } catch (error) {
-        statusEl.textContent = `오류: ${error.message}`;
-        statusEl.className = 'crawl-status error';
-        buttons.forEach(btn => btn.disabled = false);
-    }
-}
-
-// 크롤링 상태 폴링
-async function pollCrawlStatus() {
-    const statusEl = document.getElementById('crawlStatus');
-    const buttons = document.querySelectorAll('.crawl-btn');
-
-    try {
-        const response = await fetch(`${API_BASE}/api/status`);
-        const status = await response.json();
-
-        statusEl.textContent = status.message;
-
-        if (status.running) {
-            statusEl.className = 'crawl-status loading';
-            // 2초 후 다시 확인
-            setTimeout(pollCrawlStatus, 2000);
-        } else {
-            // 크롤링 완료
-            statusEl.className = status.message.includes('실패') ? 'crawl-status error' : 'crawl-status success';
-            buttons.forEach(btn => btn.disabled = false);
-
-            // 완료 시 데이터 새로고침
-            if (status.message.includes('완료')) {
-                setTimeout(async () => {
-                    await loadAllData();
-                    renderThemeRanking();
-                    updateBaseDate();
-                }, 1000);
-            }
-
-            // 5초 후 상태 메시지 숨김
-            setTimeout(() => {
-                statusEl.textContent = '';
-                statusEl.className = 'crawl-status';
-            }, 5000);
-        }
-    } catch (error) {
-        statusEl.textContent = '상태 확인 실패';
-        statusEl.className = 'crawl-status error';
-        buttons.forEach(btn => btn.disabled = false);
-    }
 }
 
 // 테마 순위 렌더링
@@ -166,11 +82,6 @@ function renderThemeRanking() {
         const returnVal = theme.metrics[`return_${currentPeriod}`];
         const spread = Math.max(theme.metrics.spread_3w, theme.metrics.spread_6w);
 
-        const leaderCode = theme.metrics[`leader_${currentPeriod}`];
-        const leader = getStock(leaderCode);
-        const leaderMetrics = theme.stockMetrics[leaderCode];
-        const leaderReturn = leaderMetrics ? leaderMetrics[`return_${currentPeriod}`] : 0;
-
         // 순위 변화 표시
         const rankChanges = getRankChanges(theme);
 
@@ -178,6 +89,26 @@ function renderThemeRanking() {
         const stageClass = getStageClass(theme.metrics.stage);
         const isOverheated = theme.metrics.stage === '3단계';
         const isSettling = theme.metrics.stage === '정리' || theme.metrics.stage === '소멸';
+
+        // 종목별 수익률 기준 TOP 3 계산
+        const sortedStocks = Object.entries(theme.stockMetrics)
+            .map(([stockCode, metrics]) => ({
+                stockCode,
+                stock: getStock(stockCode),
+                returnVal: metrics[`return_${currentPeriod}`] || 0
+            }))
+            .sort((a, b) => b.returnVal - a.returnVal)
+            .slice(0, 3);
+
+        const top3Html = sortedStocks.map((item, idx) => `
+            <div class="top-stock-item">
+                <span class="top-stock-rank rank-${idx + 1}">${idx === 0 ? '👑' : idx + 1}</span>
+                <span class="top-stock-name">${item.stock.name}</span>
+                <span class="top-stock-return ${item.returnVal >= 0 ? 'positive' : 'negative'}">
+                    ${item.returnVal >= 0 ? '+' : ''}${item.returnVal.toFixed(1)}%
+                </span>
+            </div>
+        `).join('');
 
         return `
             <div class="theme-card ${stageClass}" data-theme-id="${theme.id}">
@@ -190,31 +121,27 @@ function renderThemeRanking() {
                 </div>
 
                 <div class="theme-badges">
-                    <span class="badge stage-badge ${stageClass}">${theme.metrics.stage} ${theme.metrics.stageLabel}</span>
+                    <span class="badge stage-badge ${stageClass}">${theme.metrics.stage}</span>
                     <span class="badge spread-badge ${isOverheated ? 'warning' : ''}">
-                        확산도 ${spread}% ${isOverheated ? '⚠️' : ''}
+                        확산 ${spread}%${isOverheated ? '⚠️' : ''}
                     </span>
-                    ${isSettling ? '<span class="badge settle-badge">📉 정리구간</span>' : ''}
+                    ${isSettling ? '<span class="badge settle-badge">📉</span>' : ''}
                 </div>
 
                 <div class="theme-ranks">
                     <span class="rank-item ${currentPeriod === '3w' ? 'active' : ''}">
-                        3주 ${theme.metrics.rank_3w}위 ${rankChanges.trend_3w}
+                        3주 ${theme.metrics.rank_3w}위${rankChanges.trend_3w}
                     </span>
                     <span class="rank-item ${currentPeriod === '6w' ? 'active' : ''}">
-                        6주 ${theme.metrics.rank_6w}위 ${rankChanges.trend_6w}
+                        6주 ${theme.metrics.rank_6w}위${rankChanges.trend_6w}
                     </span>
                     <span class="rank-item ${currentPeriod === '9w' ? 'active' : ''}">
-                        9주 ${theme.metrics.rank_9w}위 ${rankChanges.trend_9w}
+                        9주 ${theme.metrics.rank_9w}위${rankChanges.trend_9w}
                     </span>
                 </div>
 
-                <div class="theme-leader">
-                    <span class="leader-label">👑 대장주:</span>
-                    <span class="leader-name">${leader.name}</span>
-                    <span class="leader-return ${leaderReturn >= 0 ? 'positive' : 'negative'}">
-                        (${leaderReturn >= 0 ? '+' : ''}${leaderReturn.toFixed(1)}%)
-                    </span>
+                <div class="theme-top-stocks">
+                    ${top3Html}
                 </div>
             </div>
         `;
@@ -374,10 +301,15 @@ function openThemeDetail(themeId) {
                                 <th>6주</th>
                                 <th>9주</th>
                                 <th>거래대금(1주)</th>
+                                <th>시총</th>
+                                <th>매출액</th>
                             </tr>
                         </thead>
                         <tbody>
-                            ${sortedStocks.map((item, idx) => `
+                            ${sortedStocks.map((item, idx) => {
+                                const marketData = DATA.market[item.stockCode] || {};
+                                const financialData = DATA.financial[item.stockCode] || {};
+                                return `
                                 <tr class="${theme.metrics[`leader_${currentPeriod}`] === item.stockCode ? 'leader-row' : ''}">
                                     <td>${idx + 1}</td>
                                     <td>
@@ -394,8 +326,10 @@ function openThemeDetail(themeId) {
                                         ${item.metrics.return_9w >= 0 ? '+' : ''}${item.metrics.return_9w.toFixed(1)}%
                                     </td>
                                     <td>${formatVolume(item.metrics.avg_volume_1w)}</td>
+                                    <td>${formatVolume(marketData.market_cap || 0)}</td>
+                                    <td>${formatVolume(financialData.revenue || 0)}</td>
                                 </tr>
-                            `).join('')}
+                            `}).join('')}
                         </tbody>
                     </table>
                 </div>

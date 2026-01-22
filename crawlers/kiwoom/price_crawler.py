@@ -12,8 +12,8 @@ import time
 class PriceCrawler:
     """일봉 데이터 크롤러"""
 
-    # TR 요청 간 대기 시간 (초)
-    REQUEST_INTERVAL = 0.5
+    # TR 요청 간 대기 시간 (초) - 키움 API 제한: 조회TR 3.6초/1회
+    REQUEST_INTERVAL = 3.7
 
     def __init__(self, api: KiwoomAPI):
         self.api = api

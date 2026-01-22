@@ -29,7 +29,10 @@ def load_json(filepath: str) -> Any:
     if not os.path.exists(filepath):
         return None
     with open(filepath, "r", encoding="utf-8") as f:
-        return json.load(f)
+        content = f.read().strip()
+        if not content:
+            return None
+        return json.loads(content)
 
 
 # ============================================
@@ -220,17 +223,33 @@ def load_prices_range(months: List[str]) -> Dict[str, Dict]:
 # ============================================
 def get_recent_months(count: int = 3) -> List[str]:
     """최근 N개월 목록 반환"""
-    from datetime import datetime
-    from dateutil.relativedelta import relativedelta
-
     months = []
-    current = datetime.now()
+    now = datetime.now()
+    year, month = now.year, now.month
 
-    for i in range(count):
-        date = current - relativedelta(months=i)
-        months.append(date.strftime("%Y-%m"))
+    for _ in range(count):
+        months.append(f"{year:04d}-{month:02d}")
+        month -= 1
+        if month == 0:
+            month = 12
+            year -= 1
 
     return months
+
+
+def get_last_price_date() -> str:
+    """저장된 가격 데이터의 마지막 날짜 반환"""
+    months = get_recent_months(3)
+    last_date = None
+
+    for month in months:
+        data = load_prices(month)
+        for stock_code, dates in data.items():
+            for date in dates.keys():
+                if last_date is None or date > last_date:
+                    last_date = date
+
+    return last_date
 
 
 def init_data_directory():

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>내 테마 - Thema Signal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="logo">⭐ 내 테마</h1>
+                    <p class="tagline">나만의 테마를 만들고 추적하세요</p>
+                </div>
+                <a href="index.html" class="settings-btn" title="메인으로">
+                    🏠
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- 내 테마 추가 버튼 -->
+        <div class="my-theme-actions">
+            <button class="btn-add-theme" id="btnAddTheme">
+                + 새 테마 만들기
+            </button>
+        </div>
+
+        <!-- 내 테마 목록 -->
+        <section class="my-theme-list" id="myThemeList">
+            <!-- JavaScript로 동적 생성 -->
+        </section>
+
+        <!-- 테마 추가/수정 모달 -->
+        <div class="modal" id="themeModal">
+            <div class="modal-content modal-small">
+                <button class="modal-close" id="modalClose">&times;</button>
+                <div class="modal-header">
+                    <h3 id="modalTitle">새 테마 만들기</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label>테마 이름</label>
+                        <input type="text" id="themeName" placeholder="예: AI반도체" maxlength="30">
+                    </div>
+                    <div class="form-group">
+                        <label>종목 추가</label>
+                        <div class="stock-search">
+                            <input type="text" id="stockSearch" placeholder="종목명 또는 코드 검색">
+                            <div class="stock-search-results" id="stockSearchResults"></div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label>선택된 종목 <span id="stockCount">(0개)</span></label>
+                        <div class="selected-stocks" id="selectedStocks">
+                            <p class="empty-msg">종목을 검색하여 추가하세요</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn-cancel" id="btnCancel">취소</button>
+                    <button class="btn-save" id="btnSave">저장</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 테마 상세 모달 -->
+        <div class="modal" id="detailModal">
+            <div class="modal-content">
+                <button class="modal-close" id="detailModalClose">&times;</button>
+                <div id="themeDetail">
+                    <!-- JavaScript로 동적 생성 -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>⚠️ 투자 참고용 정보이며, 투자 판단의 책임은 본인에게 있습니다.</p>
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        // 내 테마 데이터 (localStorage 저장)
+        let myThemes = [];
+        let editingThemeId = null;
+        let selectedStockCodes = [];
+
+        // 초기화
+        document.addEventListener('DOMContentLoaded', async () => {
+            const success = await loadAllData();
+            if (success) {
+                loadMyThemes();
+                renderMyThemes();
+                setupEventListeners();
+            }
+        });
+
+        // 내 테마 로드
+        function loadMyThemes() {
+            const saved = localStorage.getItem('myThemes');
+            myThemes = saved ? JSON.parse(saved) : [];
+        }
+
+        // 내 테마 저장
+        function saveMyThemes() {
+            localStorage.setItem('myThemes', JSON.stringify(myThemes));
+        }
+
+        // 이벤트 리스너
+        function setupEventListeners() {
+            // 새 테마 버튼
+            document.getElementById('btnAddTheme').addEventListener('click', () => {
+                openThemeModal();
+            });
+
+            // 모달 닫기
+            document.getElementById('modalClose').addEventListener('click', closeThemeModal);
+            document.getElementById('btnCancel').addEventListener('click', closeThemeModal);
+            document.getElementById('detailModalClose').addEventListener('click', closeDetailModal);
+
+            // 모달 배경 클릭
+            document.getElementById('themeModal').addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) closeThemeModal();
+            });
+            document.getElementById('detailModal').addEventListener('click', (e) => {
+                if (e.target.classList.contains('modal')) closeDetailModal();
+            });
+
+            // 저장 버튼
+            document.getElementById('btnSave').addEventListener('click', saveTheme);
+
+            // 종목 검색
+            let searchTimeout;
+            document.getElementById('stockSearch').addEventListener('input', (e) => {
+                clearTimeout(searchTimeout);
+                searchTimeout = setTimeout(() => searchStocks(e.target.value), 200);
+            });
+
+            // ESC 키
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') {
+                    closeThemeModal();
+                    closeDetailModal();
+                }
+            });
+        }
+
+        // 테마 모달 열기
+        function openThemeModal(themeId = null) {
+            editingThemeId = themeId;
+            selectedStockCodes = [];
+
+            if (themeId) {
+                const theme = myThemes.find(t => t.id === themeId);
+                document.getElementById('modalTitle').textContent = '테마 수정';
+                document.getElementById('themeName').value = theme.name;
+                selectedStockCodes = [...theme.stocks];
+            } else {
+                document.getElementById('modalTitle').textContent = '새 테마 만들기';
+                document.getElementById('themeName').value = '';
+            }
+
+            renderSelectedStocks();
+            document.getElementById('stockSearch').value = '';
+            document.getElementById('stockSearchResults').innerHTML = '';
+            document.getElementById('themeModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        // 테마 모달 닫기
+        function closeThemeModal() {
+            document.getElementById('themeModal').classList.remove('active');
+            document.body.style.overflow = '';
+            editingThemeId = null;
+            selectedStockCodes = [];
+        }
+
+        // 상세 모달 닫기
+        function closeDetailModal() {
+            document.getElementById('detailModal').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // 종목 검색
+        function searchStocks(query) {
+            const resultsEl = document.getElementById('stockSearchResults');
+            if (!query || query.length < 1) {
+                resultsEl.innerHTML = '';
+                return;
+            }
+
+            const q = query.toLowerCase();
+            const matches = Object.entries(DATA.stocks)
+                .filter(([code, info]) =>
+                    code.includes(q) || info.name.toLowerCase().includes(q)
+                )
+                .slice(0, 10);
+
+            if (matches.length === 0) {
+                resultsEl.innerHTML = '<div class="search-no-result">검색 결과 없음</div>';
+                return;
+            }
+
+            resultsEl.innerHTML = matches.map(([code, info]) => `
+                <div class="search-result-item ${selectedStockCodes.includes(code) ? 'selected' : ''}"
+                     data-code="${code}">
+                    <span class="stock-name">${info.name}</span>
+                    <span class="stock-code">${code}</span>
+                    ${selectedStockCodes.includes(code) ? '<span class="check">✓</span>' : ''}
+                </div>
+            `).join('');
+
+            // 검색 결과 클릭
+            resultsEl.querySelectorAll('.search-result-item').forEach(item => {
+                item.addEventListener('click', () => {
+                    const code = item.dataset.code;
+                    if (selectedStockCodes.includes(code)) {
+                        selectedStockCodes = selectedStockCodes.filter(c => c !== code);
+                    } else {
+                        selectedStockCodes.push(code);
+                    }
+                    searchStocks(document.getElementById('stockSearch').value);
+                    renderSelectedStocks();
+                });
+            });
+        }
+
+        // 선택된 종목 렌더링
+        function renderSelectedStocks() {
+            const container = document.getElementById('selectedStocks');
+            document.getElementById('stockCount').textContent = `(${selectedStockCodes.length}개)`;
+
+            if (selectedStockCodes.length === 0) {
+                container.innerHTML = '<p class="empty-msg">종목을 검색하여 추가하세요</p>';
+                return;
+            }
+
+            container.innerHTML = selectedStockCodes.map(code => {
+                const stock = DATA.stocks[code] || { name: code };
+                return `
+                    <div class="selected-stock-item">
+                        <span>${stock.name}</span>
+                        <button class="btn-remove" data-code="${code}">&times;</button>
+                    </div>
+                `;
+            }).join('');
+
+            // 삭제 버튼
+            container.querySelectorAll('.btn-remove').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    const code = btn.dataset.code;
+                    selectedStockCodes = selectedStockCodes.filter(c => c !== code);
+                    renderSelectedStocks();
+                    searchStocks(document.getElementById('stockSearch').value);
+                });
+            });
+        }
+
+        // 테마 저장
+        function saveTheme() {
+            const name = document.getElementById('themeName').value.trim();
+
+            if (!name) {
+                alert('테마 이름을 입력하세요');
+                return;
+            }
+            if (selectedStockCodes.length === 0) {
+                alert('최소 1개 이상의 종목을 추가하세요');
+                return;
+            }
+
+            if (editingThemeId) {
+                // 수정
+                const idx = myThemes.findIndex(t => t.id === editingThemeId);
+                if (idx !== -1) {
+                    myThemes[idx].name = name;
+                    myThemes[idx].stocks = [...selectedStockCodes];
+                }
+            } else {
+                // 새로 추가
+                myThemes.push({
+                    id: 'my_' + Date.now(),
+                    name,
+                    stocks: [...selectedStockCodes],
+                    createdAt: new Date().toISOString()
+                });
+            }
+
+            saveMyThemes();
+            renderMyThemes();
+            closeThemeModal();
+        }
+
+        // 테마 삭제
+        function deleteTheme(themeId) {
+            if (!confirm('이 테마를 삭제하시겠습니까?')) return;
+            myThemes = myThemes.filter(t => t.id !== themeId);
+            saveMyThemes();
+            renderMyThemes();
+        }
+
+        // 내 테마 목록 렌더링
+        function renderMyThemes() {
+            const container = document.getElementById('myThemeList');
+
+            if (myThemes.length === 0) {
+                container.innerHTML = `
+                    <div class="empty-state">
+                        <p>아직 만든 테마가 없습니다</p>
+                        <p>위의 버튼을 눌러 나만의 테마를 만들어보세요!</p>
+                    </div>
+                `;
+                return;
+            }
+
+            container.innerHTML = myThemes.map(theme => {
+                // 테마 지표 계산
+                const metrics = calcMyThemeMetrics(theme);
+                const stageClass = getStageClass(metrics.stage);
+
+                // TOP 3 종목
+                const top3 = metrics.stockReturns
+                    .sort((a, b) => b.return_3w - a.return_3w)
+                    .slice(0, 3);
+
+                return `
+                    <div class="my-theme-card ${stageClass}" data-theme-id="${theme.id}">
+                        <div class="my-theme-header">
+                            <div class="my-theme-name">${theme.name}</div>
+                            <div class="my-theme-actions-inline">
+                                <button class="btn-edit" data-id="${theme.id}" title="수정">✏️</button>
+                                <button class="btn-delete" data-id="${theme.id}" title="삭제">🗑️</button>
+                            </div>
+                        </div>
+                        <div class="my-theme-return ${metrics.return_3w >= 0 ? 'positive' : 'negative'}">
+                            ${metrics.return_3w >= 0 ? '+' : ''}${metrics.return_3w.toFixed(1)}%
+                            <span class="return-label">3주 수익률</span>
+                        </div>
+                        <div class="my-theme-badges">
+                            <span class="badge stage-badge ${stageClass}">${metrics.stage}</span>
+                            <span class="badge">${theme.stocks.length}종목</span>
+                            <span class="badge spread-badge">확산 ${metrics.spread_3w}%</span>
+                        </div>
+                        <div class="my-theme-top3">
+                            ${top3.map((item, idx) => `
+                                <div class="top-stock-item">
+                                    <span class="top-stock-rank rank-${idx + 1}">${idx === 0 ? '👑' : idx + 1}</span>
+                                    <span class="top-stock-name">${item.name}</span>
+                                    <span class="top-stock-return ${item.return_3w >= 0 ? 'positive' : 'negative'}">
+                                        ${item.return_3w >= 0 ? '+' : ''}${item.return_3w.toFixed(1)}%
+                                    </span>
+                                </div>
+                            `).join('')}
+                        </div>
+                        <button class="btn-detail" data-id="${theme.id}">상세보기</button>
+                    </div>
+                `;
+            }).join('');
+
+            // 이벤트 바인딩
+            container.querySelectorAll('.btn-edit').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openThemeModal(btn.dataset.id);
+                });
+            });
+            container.querySelectorAll('.btn-delete').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    deleteTheme(btn.dataset.id);
+                });
+            });
+            container.querySelectorAll('.btn-detail').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    openDetailModal(btn.dataset.id);
+                });
+            });
+        }
+
+        // 내 테마 지표 계산
+        function calcMyThemeMetrics(theme) {
+            const stockReturns = theme.stocks.map(code => {
+                const stock = DATA.stocks[code] || { name: code };
+                return {
+                    code,
+                    name: stock.name,
+                    return_3w: calcReturn(code, 3) || 0,
+                    return_6w: calcReturn(code, 6) || 0,
+                    return_9w: calcReturn(code, 9) || 0,
+                    avg_volume: calcAvgVolume(code)
+                };
+            });
+
+            // 상위 종목 평균 수익률
+            const sorted3w = [...stockReturns].sort((a, b) => b.return_3w - a.return_3w);
+            const sorted6w = [...stockReturns].sort((a, b) => b.return_6w - a.return_6w);
+            const topCount = Math.min(Math.max(3, Math.floor(stockReturns.length / 2)), 5);
+
+            const return_3w = sorted3w.slice(0, topCount).reduce((s, r) => s + r.return_3w, 0) / topCount;
+            const return_6w = sorted6w.slice(0, topCount).reduce((s, r) => s + r.return_6w, 0) / topCount;
+
+            // 확산도
+            const spread_3w = Math.round((stockReturns.filter(r => r.return_3w >= 10).length / stockReturns.length) * 100);
+            const spread_6w = Math.round((stockReturns.filter(r => r.return_6w >= 15).length / stockReturns.length) * 100);
+
+            // 단계
+            const { stage } = determineStage(return_3w, return_6w, spread_3w, spread_6w);
+
+            return { return_3w, return_6w, spread_3w, spread_6w, stage, stockReturns };
+        }
+
+        // 단계 클래스
+        function getStageClass(stage) {
+            switch (stage) {
+                case '0단계': return 'stage-0';
+                case '1단계': return 'stage-1';
+                case '2단계': return 'stage-2';
+                case '3단계': return 'stage-3';
+                case '정리': return 'stage-settle';
+                case '소멸': return 'stage-extinct';
+                default: return '';
+            }
+        }
+
+        // 상세 모달 열기
+        function openDetailModal(themeId) {
+            const theme = myThemes.find(t => t.id === themeId);
+            if (!theme) return;
+
+            const metrics = calcMyThemeMetrics(theme);
+            const container = document.getElementById('themeDetail');
+
+            container.innerHTML = `
+                <div class="detail-header">
+                    <h2>⭐ ${theme.name}</h2>
+                    <div class="detail-return ${metrics.return_3w >= 0 ? 'positive' : 'negative'}">
+                        3주 수익률: ${metrics.return_3w >= 0 ? '+' : ''}${metrics.return_3w.toFixed(1)}%
+                    </div>
+                </div>
+                <div class="detail-body">
+                    <div class="detail-grid">
+                        <div class="detail-card">
+                            <h4>📊 확산도</h4>
+                            <div class="spread-bars">
+                                <div class="spread-item">
+                                    <span>3주</span>
+                                    <div class="spread-bar">
+                                        <div class="spread-fill" style="width: ${Math.min(metrics.spread_3w, 100)}%"></div>
+                                    </div>
+                                    <span>${metrics.spread_3w}%</span>
+                                </div>
+                                <div class="spread-item">
+                                    <span>6주</span>
+                                    <div class="spread-bar">
+                                        <div class="spread-fill" style="width: ${Math.min(metrics.spread_6w, 100)}%"></div>
+                                    </div>
+                                    <span>${metrics.spread_6w}%</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-card">
+                            <h4>📋 테마 정보</h4>
+                            <p>종목 수: ${theme.stocks.length}개</p>
+                            <p>3주 수익률: ${metrics.return_3w.toFixed(1)}%</p>
+                            <p>6주 수익률: ${metrics.return_6w.toFixed(1)}%</p>
+                            <p>단계: ${metrics.stage}</p>
+                        </div>
+                    </div>
+                    <div class="detail-card full-width">
+                        <h4>📈 종목별 현황</h4>
+                        <table class="stock-table">
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <th>종목명</th>
+                                    <th>3주</th>
+                                    <th>6주</th>
+                                    <th>9주</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                ${metrics.stockReturns
+                                    .sort((a, b) => b.return_3w - a.return_3w)
+                                    .map((item, idx) => `
+                                    <tr class="${idx === 0 ? 'leader-row' : ''}">
+                                        <td>${idx + 1}</td>
+                                        <td>
+                                            <span class="stock-name">${item.name}</span>
+                                            <span class="stock-code">${item.code}</span>
+                                        </td>
+                                        <td class="${item.return_3w >= 0 ? 'positive' : 'negative'}">
+                                            ${item.return_3w >= 0 ? '+' : ''}${item.return_3w.toFixed(1)}%
+                                        </td>
+                                        <td class="${item.return_6w >= 0 ? 'positive' : 'negative'}">
+                                            ${item.return_6w >= 0 ? '+' : ''}${item.return_6w.toFixed(1)}%
+                                        </td>
+                                        <td class="${item.return_9w >= 0 ? 'positive' : 'negative'}">
+                                            ${item.return_9w >= 0 ? '+' : ''}${item.return_9w.toFixed(1)}%
+                                        </td>
+                                    </tr>
+                                `).join('')}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            `;
+
+            document.getElementById('detailModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    </script>
+</body>
+</html>

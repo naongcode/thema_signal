@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>설정 - Thema Signal</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-top">
+                <div>
+                    <h1 class="logo">⚙️ 설정</h1>
+                    <p class="tagline">데이터 수집 및 시스템 설정</p>
+                </div>
+                <a href="index.html" class="settings-btn" title="메인으로">
+                    🏠
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="settings-section">
+            <h2 class="section-title">📊 데이터 수집</h2>
+            <p class="section-desc">각 버튼을 클릭하여 최신 데이터를 수집합니다.</p>
+
+            <div class="crawl-cards">
+                <div class="crawl-card">
+                    <div class="crawl-card-icon">📊</div>
+                    <h3>일별 수집</h3>
+                    <p>가격 + 시장 데이터</p>
+                    <p class="crawl-card-desc">매일 장 마감 후 실행하세요. 종가, 거래량 등 일별 시세 데이터를 수집합니다.</p>
+                    <button class="crawl-btn-large" data-type="daily">
+                        수집 시작
+                    </button>
+                </div>
+
+                <div class="crawl-card">
+                    <div class="crawl-card-icon">📅</div>
+                    <h3>주간 수집</h3>
+                    <p>테마 + 종목 데이터</p>
+                    <p class="crawl-card-desc">주 1회 실행하세요. 테마 분류 및 종목 매핑 정보를 업데이트합니다.</p>
+                    <button class="crawl-btn-large" data-type="weekly">
+                        수집 시작
+                    </button>
+                </div>
+
+                <div class="crawl-card">
+                    <div class="crawl-card-icon">📈</div>
+                    <h3>분기 수집</h3>
+                    <p>재무 데이터</p>
+                    <p class="crawl-card-desc">분기 1회 실행하세요. 재무제표, PER, PBR 등 재무 지표를 수집합니다.</p>
+                    <button class="crawl-btn-large" data-type="quarterly">
+                        수집 시작
+                    </button>
+                </div>
+            </div>
+
+            <div class="crawl-status-box" id="crawlStatusBox">
+                <span class="crawl-status-label">상태:</span>
+                <span class="crawl-status-text" id="crawlStatus">대기 중</span>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>⚠️ 투자 참고용 정보이며, 투자 판단의 책임은 본인에게 있습니다.</p>
+        </div>
+    </footer>
+
+    <script>
+        const API_BASE = 'http://localhost:5000';
+
+        document.querySelectorAll('.crawl-btn-large').forEach(btn => {
+            btn.addEventListener('click', () => {
+                const type = btn.dataset.type;
+                startCrawling(type);
+            });
+        });
+
+        async function startCrawling(type) {
+            const statusEl = document.getElementById('crawlStatus');
+            const statusBox = document.getElementById('crawlStatusBox');
+            const buttons = document.querySelectorAll('.crawl-btn-large');
+
+            buttons.forEach(btn => btn.disabled = true);
+            statusEl.textContent = `${type} 수집 시작 중...`;
+            statusBox.className = 'crawl-status-box loading';
+
+            try {
+                const response = await fetch(`${API_BASE}/api/crawl/${type}`, {
+                    method: 'POST'
+                });
+
+                if (!response.ok) {
+                    const error = await response.json();
+                    throw new Error(error.error || '수집 요청 실패');
+                }
+
+                pollCrawlStatus();
+
+            } catch (error) {
+                statusEl.textContent = `오류: ${error.message}`;
+                statusBox.className = 'crawl-status-box error';
+                buttons.forEach(btn => btn.disabled = false);
+            }
+        }
+
+        async function pollCrawlStatus() {
+            const statusEl = document.getElementById('crawlStatus');
+            const statusBox = document.getElementById('crawlStatusBox');
+            const buttons = document.querySelectorAll('.crawl-btn-large');
+
+            try {
+                const response = await fetch(`${API_BASE}/api/status`);
+                const status = await response.json();
+
+                statusEl.textContent = status.message;
+
+                if (status.running) {
+                    statusBox.className = 'crawl-status-box loading';
+                    setTimeout(pollCrawlStatus, 2000);
+                } else {
+                    statusBox.className = status.message.includes('실패')
+                        ? 'crawl-status-box error'
+                        : 'crawl-status-box success';
+                    buttons.forEach(btn => btn.disabled = false);
+
+                    setTimeout(() => {
+                        statusEl.textContent = '대기 중';
+                        statusBox.className = 'crawl-status-box';
+                    }, 5000);
+                }
+            } catch (error) {
+                statusEl.textContent = '상태 확인 실패';
+                statusBox.className = 'crawl-status-box error';
+                buttons.forEach(btn => btn.disabled = false);
+            }
+        }
+    </script>
+</body>
+</html>
