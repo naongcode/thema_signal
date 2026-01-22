@@ -1,5 +1,6 @@
 // Thema Signal - 메인 애플리케이션
 let currentPeriod = '3w';
+let currentStage = 'all';
 
 // 초기화
 document.addEventListener('DOMContentLoaded', async () => {
@@ -51,6 +52,24 @@ function setupEventListeners() {
         });
     });
 
+    // 단계 필터 클릭 (토글 방식)
+    document.querySelectorAll('.stage-btn').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+            const clickedStage = e.target.dataset.stage;
+            if (currentStage === clickedStage) {
+                // 같은 버튼 다시 클릭하면 해제 (전체 보기)
+                e.target.classList.remove('active');
+                currentStage = 'all';
+            } else {
+                // 다른 버튼 클릭하면 선택
+                document.querySelectorAll('.stage-btn').forEach(b => b.classList.remove('active'));
+                e.target.classList.add('active');
+                currentStage = clickedStage;
+            }
+            renderThemeRanking();
+        });
+    });
+
     // 모달 닫기
     document.getElementById('modalClose').addEventListener('click', closeModal);
     document.getElementById('themeModal').addEventListener('click', (e) => {
@@ -69,11 +88,17 @@ function setupEventListeners() {
 
 // 테마 순위 렌더링
 function renderThemeRanking() {
-    const themes = getThemesByPeriod(currentPeriod);
+    let themes = getThemesByPeriod(currentPeriod);
     const container = document.getElementById('themeRanking');
 
+    // 단계 필터링
+    if (currentStage !== 'all') {
+        const stageMap = { '0': '0단계', '1': '1단계', '2': '2단계', '3': '3단계' };
+        themes = themes.filter(t => t.metrics.stage === stageMap[currentStage]);
+    }
+
     if (themes.length === 0) {
-        container.innerHTML = '<div class="empty-message">표시할 테마가 없습니다.</div>';
+        container.innerHTML = '<div class="empty-message">해당 조건의 테마가 없습니다.</div>';
         return;
     }
 
@@ -335,6 +360,9 @@ function openThemeDetail(themeId) {
                         </tbody>
                     </table>
                 </div>
+            </div>
+            <div class="modal-bottom-close">
+                <button class="btn-close-modal" onclick="closeModal()">닫기</button>
             </div>
         </div>
     `;
