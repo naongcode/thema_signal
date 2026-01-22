@@ -16,6 +16,15 @@ class ThemeCrawler:
 
     def __init__(self, api: KiwoomAPI):
         self.api = api
+        self._kosdaq_codes = None  # 코스닥 종목 캐시
+
+    def _load_kosdaq_codes(self):
+        """코스닥 종목 코드 목록 로드 (캐싱)"""
+        if self._kosdaq_codes is None:
+            result = self.api.ocx.dynamicCall("GetCodeListByMarket(QString)", "10")
+            self._kosdaq_codes = set(result.split(";")) if result else set()
+            print(f"코스닥 종목 {len(self._kosdaq_codes)}개 로드")
+        return self._kosdaq_codes
 
     def get_theme_list(self) -> List[Dict]:
         """
@@ -46,6 +55,23 @@ class ThemeCrawler:
         print(f"테마 {len(themes)}개 조회 완료")
         return themes
 
+    def get_market_type(self, stock_code: str) -> str:
+        """
+        종목의 시장 구분 조회
+
+        Args:
+            stock_code: 종목코드 (6자리)
+
+        Returns:
+            "KOSPI" 또는 "KOSDAQ"
+        """
+        # 캐싱된 코스닥 목록에서 확인
+        kosdaq_codes = self._load_kosdaq_codes()
+        if stock_code in kosdaq_codes:
+            return "KOSDAQ"
+
+        return "KOSPI"
+
     def get_theme_stocks(self, theme_code: str) -> List[Dict]:
         """
         테마별 종목 목록 조회 (GetThemeGroupCode 사용)
@@ -71,16 +97,17 @@ class ThemeCrawler:
             if not code:
                 continue
 
-            # 종목코드 앞자리로 시장 구분 (A: KOSPI, J/Q: KOSDAQ)
-            market = "KOSDAQ" if code.startswith("J") or code.startswith("Q") else "KOSPI"
-            # 알파벳 접두사 제거
-            clean_code = code.lstrip("AJQ")
+            # 알파벳 접두사 제거 (A, J, Q 등)
+            clean_code = code.lstrip("ABCDEFGHIJKLMNOPQRSTUVWXYZ")
 
             if clean_code:
                 # 종목명 조회
                 name = self.api.ocx.dynamicCall(
                     "GetMasterCodeName(QString)", clean_code
                 )
+
+                # 시장 구분 조회
+                market = self.get_market_type(clean_code)
 
                 stocks.append({
                     "code": clean_code,
@@ -121,6 +148,42 @@ class ThemeCrawler:
             time.sleep(self.REQUEST_INTERVAL)
 
         print(f"크롤링 완료: 테마 {len(themes)}개")
+        return data
+
+    def crawl_kosdaq_only(self) -> Dict:
+        """
+        코스닥 종목만 크롤링
+        """
+        data = {
+            "themes": [],
+            "theme_stocks": {}
+        }
+
+        # 코스닥 종목 목록 미리 로드
+        kosdaq_codes = self._load_kosdaq_codes()
+        print(f"코스닥 종목 {len(kosdaq_codes)}개 로드됨")
+
+        # 1. 테마 목록 조회
+        themes = self.get_theme_list()
+        data["themes"] = themes
+
+        # 2. 각 테마별 코스닥 종목만 조회
+        total_kosdaq = 0
+        for i, theme in enumerate(themes):
+            theme_code = theme["code"]
+            print(f"[{i + 1}/{len(themes)}] {theme['name']} 조회 중...")
+
+            all_stocks = self.get_theme_stocks(theme_code)
+            kosdaq_stocks = [s for s in all_stocks if s["market"] == "KOSDAQ"]
+
+            if kosdaq_stocks:
+                data["theme_stocks"][theme_code] = kosdaq_stocks
+                total_kosdaq += len(kosdaq_stocks)
+                print(f"  -> 코스닥 {len(kosdaq_stocks)}개")
+
+            time.sleep(self.REQUEST_INTERVAL)
+
+        print(f"\n완료: 테마 {len(themes)}개, 코스닥 종목 {total_kosdaq}개")
         return data
 
 

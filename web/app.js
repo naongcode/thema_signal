@@ -208,8 +208,10 @@ function openThemeDetail(themeId) {
     const leader9wMetrics = theme.stockMetrics[leader9w] || { return_9w: 0 };
     const leaderVolumeMetrics = theme.stockMetrics[leaderVolume] || { avg_volume_1w: 0 };
 
+    const stageClass = getStageClass(theme.metrics.stage);
+
     detailContainer.innerHTML = `
-        <div class="detail-header">
+        <div class="detail-header ${stageClass}">
             <div class="detail-stage">
                 <span class="badge">${theme.metrics.stage} ${theme.metrics.stageLabel}</span>
             </div>
